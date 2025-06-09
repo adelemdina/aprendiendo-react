@@ -1,8 +1,14 @@
-import { Header } from "./componets/Header";
+
+import { Header } from "./components/Header";
+
 
 export function App () {
     return(
-       <Header />
+    <div className="min-h-screen">
+      <Header />
+    
+    
+    </div>
     )
 }
 

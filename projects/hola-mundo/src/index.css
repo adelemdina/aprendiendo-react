@@ -1,7 +1,9 @@
 @import "tailwindcss";
 
 
-
+body{
+ @apply bg-indigo-950;
+}
 
 .logo {
   width: 90.53px;
