@@ -5,7 +5,109 @@ body{
  @apply bg-indigo-950;
 }
 
-.logo {
-  width: 90.53px;
-  height: 70px;
+
+@theme{
+  --font-sans: 'Real Text', sans-serif;
+
+
+}
+
+
+@font-face {
+    font-family: 'Real Text';
+    src: url('./assets/fonts/RealTextRegular.woff2') format('woff2'),
+        url('./assets/fonts/RealTextRegular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Real Text';
+    src: url('RealTextSemilight.woff2') format('woff2'),
+        url('RealTextSemilight.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Real Text';
+    src: url('RealTextUltralight.woff2') format('woff2'),
+        url('RealTextUltralight.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Real Text';
+    src: url('./assets/fonts/RealTextMedium.woff2') format('woff2'),
+        url('./assets/fonts/RealTextMedium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Real Text';
+    src: url('RealTextLight.woff2') format('woff2'),
+        url('RealTextLight.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Real Text';
+    src: url('RealTextHairline.woff2') format('woff2'),
+        url('RealTextHairline.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Real Text';
+    src: url('RealTextExtlight.woff2') format('woff2'),
+        url('RealTextExtlight.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Real Text';
+    src: url('./assets/fonts/RealTextExtrabold.woff2') format('woff2'),
+        url('./assets/fonts/RealTextExtrabold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Real Text';
+    src: url('RealTextDemibold.woff2') format('woff2'),
+        url('RealTextDemibold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Real Text';
+    src: url('./assets/fonts/RealTextBold.woff2') format('woff2'),
+        url('./assets/fonts/RealTextBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Real Text';
+    src: url('RealTextBlack.woff2') format('woff2'),
+        url('RealTextBlack.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
 }

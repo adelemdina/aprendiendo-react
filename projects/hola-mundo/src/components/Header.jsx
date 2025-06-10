@@ -7,24 +7,25 @@ import { Contact } from "./Contact";
 
 export const Header = () => {
    return (
-    <header class="w-full  relative">
-      {/* Fondo con efecto de red/nodos */}
+   <header class="pl-[58px] pr-[58px]">
+    
       <div class="absolute inset-0 bg-[url('/network-bg.png')] bg-cover bg-center opacity-20"></div>
       
-      <div class="max-w-[1440px] mx-auto px-4 h-20 flex items-center justify-between relative z-10">
-        {/* Sección izquierda: Logo, nombre y selector de idioma */}
-        <div class="flex items-center space-x-9">
-         < Logo />
-          <div class="hidden md:block ">
-         < LanguageSelector />
-          </div>
+      <div class="flex items-center w-full relative z-10">
+       
+        <div class="flex items-center gap-4">
+          <Logo />
+          <LanguageSelector />
         </div>
+      
+        <div class="ml-[520px] flex items-center">
         
-        {/* Navegación central */}
-        < NavBar />
-        
-        {/* Botón de contacto */}
-        < Contact />
+        </div>
+
+        <div class="ml-auto flex items-center gap-22 pr-[58px]">
+            <NavBar />
+          <Contact />
+        </div>
       </div>
     </header>
   );

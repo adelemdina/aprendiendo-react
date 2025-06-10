@@ -1,26 +1,27 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faGithub, faLinkedin, faTwitter,faInstagram, faBehance  } from '@fortawesome/free-brands-svg-icons'
+
 export const Content = () => {
 
   return (
-    <section className="max-w-7xl mx-auto px-6 py-12 flex flex-col md:flex-row items-center justify-center gap-12">
-      {/* Div de texto */}
-      <div className="flex flex-col items-center md:items-start text-center md:text-left max-w-md text-white">
-          <h1>Hola! soy Adele Medina</h1>
-            <h2>Developer and Web Designer</h2>
-            <p>Adelemedina@gmail.com</p>
-            <p>Mérida - Venezuela</p>
-            <div>
-                <a href="https://linkedin.com">LinkedIn</a>
-                <a href="https://twitter.com">Twitter</a>
-                <a href="https://github.com">GitHub</a>
-            </div>
+    <section>
+      <div>
+      <h1 class="text-5xl text-white">Hola! Soy</h1>
+         <h1 className="text-8xl font-bold bg-gradient-to-r from-[#4841BB] via-[#4361D7] to-[#4841BB] bg-clip-text text-transparent"><span class="text-white">Adele</span> Medina</h1>
+            <h2 class="text-2xl text-white">Developer and Web Designer</h2>
       </div>
-
-      {/* Div de imagen */}
-      <div className="flex justify-center">
+   
+   <div class="text-5x1">
+            <p class="text-4xl font-bold">Adelemedina@gmail.com</p>
+            <p class="text-2x1 font-regular">Mérida - Venezuela</p>
+            </div>
+   
+         <div className="md:ml-8 flex justify-end w-full md:w-auto pr-[56px]">
         <img
           src="./src/assets/images/imagen.png"
           alt="ADelemdina"
-          className="w-full max-w-sm object-contain rounded-lg shadow-lg"
+             style={{ width: '865px', height: '865px' }}
+          class="object-contain rounded-lg shadow-lg"
         />
       </div>
     </section>
