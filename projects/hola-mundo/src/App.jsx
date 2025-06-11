@@ -1,15 +1,16 @@
 
 import { Content } from "./components/Content";
 import { Header } from "./components/Header";
-
+import { Links } from "./components/Links";
 
 
 export function App () {
     return(
-    <div class="min-h-screen">
+    <div className="min-h-screen">
   
-      <Header />
-    <Content />
+      < Header />
+      <Content />
+      
     
     </div>
     )

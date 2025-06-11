@@ -4,7 +4,7 @@ export const Logo = () => {
       <img
         src="./src/assets/images/logo2.png"
         alt="Logo"
-      class="w-[90.53px] h-[70px] object-contain rounded-lg" 
+      className="w-[90.53px] h-[70px] object-contain rounded-lg" 
       />
     
     </div>

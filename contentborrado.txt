@@ -14,8 +14,6 @@
             <FontAwesomeIcon icon={faGithub} className="text-3xl text-white hover:text-[#4841BB] transition" />
           </a>
           <a href="https://www.linkedin.com/in/adelemdina/" target="_blank" aria-label="LinkedIn" title="Ir a LinkedIn @adlemedina">
-            <FontAwesomeIcon icon={faLinkedin} className="text-3xl text-white hover:text-[#4841BB] transition" />
-          </a>
           <a href="https://instagram.com/adelemdina" target="_blank" aria-label="Instagram" title="Ir a Instagram @adlemedina">
             <FontAwesomeIcon icon={faInstagram} className="text-3xl text-white hover:text-[#4841BB] transition" />
           </a>

@@ -9,7 +9,7 @@ export const Header = () => {
    return (
    <header class="pl-[58px] pr-[58px]">
     
-      <div class="absolute inset-0 bg-[url('/network-bg.png')] bg-cover bg-center opacity-20"></div>
+     
       
       <div class="flex items-center w-full relative z-10">
        
