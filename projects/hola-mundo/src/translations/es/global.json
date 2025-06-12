@@ -1,5 +1,20 @@
 {
-    "header" :{
-        "hello-world": "Hola Mundo"
-    }
+    "presentation" :{
+        "Iam": "Hola!, Soy!",
+         "work": "Desarrolladora y Diseñadora web"
+    }    ,
+    "navbar": {
+        "home": "Inicio",
+        "about": "Acerca de",
+        "services": "Servicios",
+        "portfolio": "Trabajos Realizados"
+    },
+   "contact": {
+    "contact": "Contáctame",
+    "description": "No dudes en comunicarte para cualquier consulta o colaboración.",
+    "email": "Correo electrónico",
+    "phone": "Teléfono",
+    "sendMessage": "Enviar mensaje",
+    "chat": "Chatea conmigo"
+}
 }

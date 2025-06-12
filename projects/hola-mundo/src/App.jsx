@@ -6,13 +6,12 @@ import { Links } from "./components/Links";
 
 export function App () {
     return(
-    <div className="min-h-screen">
-  
-      < Header />
-      <Content />
-      
-    
-    </div>
+<div className="min-h-screen bg-background text-foreground overflow-hidden">
+ 
+  <Header />
+  <Content />
+
+</div>
     )
 }
 

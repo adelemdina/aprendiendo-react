@@ -13,7 +13,7 @@ export const Header = () => {
       
       <div class="flex items-center w-full relative z-10">
        
-        <div class="flex items-center gap-4">
+        <div class="flex items-center gap-12">
           <Logo />
           <LanguageSelector />
         </div>

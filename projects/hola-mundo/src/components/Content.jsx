@@ -7,16 +7,22 @@ export const Content = () => {
   return (
     
 
- <section className="text-white pt-32 pl-14 flex flex-col md:flex-row items-start gap-10">
+ <section className="text-white pt-32 pl-14 flex flex-col md:flex-row items-start gap-10"
+ >
   <div className="flex-1 pl-16 pt-16">
     <div className="space-y-1.5 mb-8">
-      <h1>{t("header.hello-world")}</h1>
-      <h1 className="text-7xl text-white pb-16">Hola! Soy</h1>
-    
-      <h1 className="text-8xl font-bold bg-mi-gradiente bg-clip-text text-transparent">
-        <span className="text-white">Adele</span> Medina
-      </h1>
-      <h2 className="text-2xl text-white">Developer and Web Designer</h2>
+   
+      <h1 className="text-7xl text-white pb-16">{t("presentation.Iam")}</h1>
+     <div className='flex flex-row items-start gap-2'>
+        <h1 className="text-8xl font-bold text-white">
+          Adele
+        </h1>
+        <h1 className="text-8xl font-bold bg-[linear-gradient(90deg,#4841BB_0%,#4361D7_21%,#435FD5_85%,#4841BB_100%)] bg-clip-text text-transparent flex">
+          Medina
+        </h1>
+      </div>
+     
+      <h2 className="text-2xl text-white">{t("presentation.work")}</h2>
     </div>
 
     <div class="pt-3 pb-3">
@@ -31,7 +37,7 @@ export const Content = () => {
         rel="noopener noreferrer"
         aria-label="GitHub"
         title="Ir a GitHub @adelemdina"
-        className="text-white hover:text-indigo-300 transition-colors duration-300"
+        className="text-white hover:bg-primary transition-colors duration-300"
       >
         <FontAwesomeIcon icon={faSquareGithub} className="text-5xl" />
       </a>
@@ -42,13 +48,13 @@ export const Content = () => {
         rel="noopener noreferrer"
         aria-label="LinkedIn"
         title="Ir a LinkedIn @adelemdina"
-        className="text-white hover:text-indigo-300 transition-colors duration-300"
+        className="text-white hover:bg-mi-gradiente transition-colors duration-300"
       >
         <FontAwesomeIcon icon={faLinkedin} className="text-5xl" />
       </a>
 
       <a
-        href="https://www.instagram.com/adelemedina"
+        href="https://www.instagram.com/adelemdina"
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Instagram"
@@ -78,16 +84,20 @@ export const Content = () => {
       style={{ width: '720px', height: '720px' }}
       className="object-contain rounded-lg shadow-lg"
     />
-       <a
+     </div>
+     
+   <a
         href="https://wa.me/tu_numero"
-        className="fixed bottom-8 right-8 z-20 bg-green-500 text-white px-6 py-3 rounded-full shadow-lg flex items-center space-x-2 text-lg font-semibold hover:bg-green-600 transition"
+        className="fixed bottom-8 right-[122px] z-20 bg-green-500 text-white px-6 py-2.5 rounded-full shadow-lg flex items-center space-x-2 text-lg font-semibold hover:bg-green-600 transition"
         target="_blank"
         rel="noopener noreferrer"
       >
         <FontAwesomeIcon icon={faWhatsapp} className="text-2xl mr-2" />
       <span>Chatea conmigo</span>
       </a>
-  </div>
+     
+     
+ 
 </section>
 
   );

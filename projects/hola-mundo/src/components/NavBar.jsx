@@ -1,12 +1,14 @@
+import { useTranslation } from 'react-i18next';
 
 
 
 export const NavBar = () => {
-  const navItems = [
-    { name: 'Inicio', href: '#inicio' },
-    { name: 'Acerca de', href: '#acerca' },
-    { name: 'Servicios', href: '#servicios' },
-    { name: 'Trabajos realizados', href: '#trabajos' }
+   const [t] = useTranslation("global");
+   const navItems = [
+    { name: t('navbar.home'), href: '#inicio' },
+    { name: t('navbar.about'), href: '#acerca' },
+    { name: t('navbar.services'), href: '#servicios' },
+    { name: t('navbar.portfolio'), href: '#trabajos' }
   ];
   
   return (

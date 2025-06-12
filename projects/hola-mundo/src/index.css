@@ -15,6 +15,9 @@ body{
     rgba(72, 65, 187, 1) 100%);
 
 --color-secondary: #4841BB;
+--color-primary: (linear-gradient(
+    90deg,#4841BB_0%,#4361D7_21%,#435FD5_85%,
+    #4841BB_100%))
 
 }
 
