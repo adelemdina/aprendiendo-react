@@ -9,7 +9,6 @@ export const LanguageSelector = () => {
   const enRef = useRef(null);
 
   // Estado para forzar un re-render cuando los refs estén listos
-  const [mounted, setMounted] = useState(false);
   useEffect(() => {
     setMounted(true);
   }, []);
