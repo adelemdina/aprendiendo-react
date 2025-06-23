@@ -7,15 +7,9 @@ return (
   className="bg-white h-[321px] bg-cover bg-center bg-no-repeat flex justify-center items-center"
   style={{ backgroundImage: `url(${shapes})` }}
 >
- <div className="relative z-10 text-white">
-      
-      <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-        Conoce los trabajos<br />
-        realizados recientemente
-      </h2>
-    </div>
+ 
   <div className="flex flex-col md:flex-row gap-[50px] max-w-7xl w-full justify-center items-center text-center">
-    
+
     <div className="min-w-[200px]">
       <h3 className="text-4xl font-bold mb-4 text-neutral-900 whitespace-nowrap">
         +5 Años
