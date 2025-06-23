@@ -5,7 +5,18 @@ body{
  @apply bg-indigo-950;
 }
 
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
 
+.animate-marquee {
+  animation: marquee 20s linear infinite;
+}
 @theme{
   --font-sans: 'Real Text', sans-serif;
   --color-mi-gradiente: linear-gradient(90deg,
@@ -30,6 +41,15 @@ body{
     color: transparent;
 }
 
+@layer utilities {
+  .text-mi-gradiente {
+    background: var(--color-mi-gradiente);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+  }
+}
 .bg-clip-text {
     background-clip: text;
 }

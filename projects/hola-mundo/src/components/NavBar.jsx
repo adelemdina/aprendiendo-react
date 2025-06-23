@@ -13,9 +13,9 @@ export const NavBar = () => {
   
   return (
     <nav className="hidden lg:block">
-      <ul className="flex space-x-12 font-realtext text-lg font-regular">
+      <ul className="flex space-x-10 font-realtext text-lg font-regular">
         {navItems.map((item, index) => (
-          <li key={index}>
+          <li key={index}> 
             <a
               href={item.href}
               className="text-white hover:text-blue-300 transition-colors cursor-pointer">

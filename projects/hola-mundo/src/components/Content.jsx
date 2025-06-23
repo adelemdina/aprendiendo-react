@@ -1,13 +1,15 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSquareGithub, faLinkedin, faWhatsapp, faSquareInstagram, faSquareBehance } from '@fortawesome/free-brands-svg-icons'
 import { useTranslation } from 'react-i18next'; 
+
+
 export const Content = () => {
 
   const [t, i18n] = useTranslation("global");
   return (
     
 
- <section className="text-white pt-32 pl-14 flex flex-col md:flex-row items-start gap-10"
+ <section className="text-white pt-32 pl-14 flex flex-col md:flex-row items-start gap-10 "
  >
   <div className="flex-1 pl-16 pt-16">
     <div className="space-y-1.5 mb-8">
@@ -26,7 +28,7 @@ export const Content = () => {
     </div>
 
     <div class="pt-3 pb-3">
-      <p className="text-5xl font-bold text-mi-gradiente">Adelemedina@gmail.com</p>
+      <p className="text-5xl font-bold text-indigo-700">Adelemedina@gmail.com</p>
       <p className="text-3xl font-regular">Mérida - Venezuela</p>
     </div>
 
