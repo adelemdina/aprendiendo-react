@@ -36,6 +36,19 @@ body{
   background: var(--color-mi-gradiente);
 
 }
+.hover\:bg-mi-gradiente:hover {
+  background: #161A3D;
+}
+.acercade-section:has(.group:hover) {
+  transform: translateY(20px);
+  transition: transform 0.5s cubic-bezier(0.4,0,0.2,1);
+}
+/* .bg-mi-gradiente:hover {
+  background: white !important;
+}
+.bg-mi-gradiente:hover .punta-burbuja {
+  background: white !important;
+} */
 
 .text-transparent {
     color: transparent;

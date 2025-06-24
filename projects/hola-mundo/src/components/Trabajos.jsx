@@ -25,9 +25,9 @@ const contenidos = {
   },
   "Sistema ERP": {
     icon: faMicrosoft, // Puedes cambiar el icono si deseas
-    titulo: "Sistemas ERP software integrales",
+    titulo: "Sistemas ERP",
     descripcion:
-      "Entender las métricas clave es esencial para el éxito de tu negocio digital. Te ayudamos a realizar un seguimiento efectivo y a interpretar los datos para mejorar tus resultados.",
+      "Desarrollado e implementacion sistemas ERP adaptados a diversas industrias, mejorando la eficiencia y el control de procesos empresariales. ",
     items: [
       "Automatización de procesos internos.",
       "Informes de seguimiento claros y concisos",
@@ -94,7 +94,7 @@ export  const Trabajos = () => {
       </div>
      
 
-    <div className="max-w-7xl mx-auto bg-white rounded-2xl p-8 md:p-12 flex flex-col md:flex-row items-center gap-8 shadow mt-8">
+    <div className="max-w-7xl mx-auto bg-white rounded-2xl p-8 md:p-12 flex flex-col md:flex-row items-center gap-8 shadow mt-8 min-h-[390px] h-[390px]">
   {/* Columna de texto */}
   <div className="flex-1 text-left">
     <div className="mb-4">

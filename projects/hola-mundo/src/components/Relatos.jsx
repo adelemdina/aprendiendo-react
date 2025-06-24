@@ -1,164 +1,299 @@
+import React, { useState } from "react";
+
+const testimonios = [
+  {
+    texto:
+      "Colaborar con Medina en la app Italian Import Racing fue excepcional. Su experiencia en PHP y MySQL fue clave para crear una tienda en línea eficiente. Su compromiso y profesionalismo garantizan el éxito del proyecto.",
+    nombre: "Javier p.",
+    cargo: "Colaborador Import Rancing App",
+    img: "https://randomuser.me/api/portraits/men/32.jpg",
+    bandera: "🇺🇸",
+  },
+  {
+    texto:
+      "Su trabajo como diseñadora UX/UI, utilizando Figma y Tailwind CSS, impactó significativamente la experiencia del usuario. Sus soluciones centradas en el usuario fueron clave para la ejecución del proyecto.",
+    nombre: "Edwin M.",
+    cargo: "Product Manager Emacsoft",
+    img: "https://randomuser.me/api/portraits/women/44.jpg",
+    bandera: "🇻🇪",
+  },
+  {
+    texto:
+      "Trabajar con Adeleina Medina y su experiencia en PHP, JavaScript y CodeIgniter fue fundamental para mejorar las funcionalidades de nuestro sistema ERP. Altamente recomendada.",
+    nombre: "Sebastian I.",
+    cargo: "Ing. Informática Sistema ERP",
+    img: "https://randomuser.me/api/portraits/men/45.jpg",
+    bandera: "🇻🇪",
+  },
+   {
+    texto:
+      "Adeleimar Medina optimizó procesos administrativos en la empresa al implementar nuevos módulos en ProteoERP, mejorando la gestión de inventario y facturación. Su experiencia en PHP y MySQL fue clave para el éxito del proyecto.",
+    nombre: "Edwin Moreno",
+    cargo: "Manager Proteo ERP",
+    img: "https://randomuser.me/api/portraits/men/45.jpg",
+    bandera: "🇻🇪",
+  },
+     {
+    texto:
+      "Trabajar con ella fue excelente. Desarrolló la parte interna de nuestra aplicación móvil, creando un sistema rápido y confiable. Su compromiso y profesionalismo se reflejaron en soluciones adaptadas a nuestras necesidades.",
+    nombre: "Pedro D",
+    cargo: "Ing.  Import Racing App",
+    img: "https://randomuser.me/api/portraits/men/45.jpg",
+    bandera: "🇻🇪",
+  },
+
+    {
+    texto:
+      "En el desarrollo del sitio web para Orion AutoCaress, coordiné el proyecto y asigné a Adeleimar como guía técnica del equipo backend. Su liderazgo y creación de funciones claves fueron fundamentales para el éxito del proyecto.",
+    nombre: "Pedro D",
+    cargo: "Eliezar Menéndez",
+    img: "https://randomuser.me/api/portraits/men/45.jpg",
+    bandera: "🇻🇪",
+  },
+];
+
+
 export const Relatos = () => {
-    return(
+    const [start, setStart] = useState(0);
+  const [direction, setDirection] = useState("right"); // "left" o "right"
+  const [animating, setAnimating] = useState(false);
 
+  const testimoniosPorPagina = 3;
+  const total = testimonios.length;
 
-               <section className="bg-gradient-to-tr from-[#191970] to-[#1a1a2e] min-h-screen w-full px-0 py-0 flex flex-col items-center">
-            {/* Título y testimonios */}
-            <div className="w-full max-w-7xl mx-auto pt-12">
-                <h2 className="text-4xl md:text-5xl font-medium text-white mb-10 text-center leading-tight">
-                    Relatos de algunos<br />Clientes
-                </h2>
-                {/* Testimonios */}
-                <div className="flex flex-col md:flex-row justify-center items-stretch gap-8 md:gap-8 mb-8">
-                    {/* Testimonio 1 */}
-                    <div className="bg-[#4841BB] bg-opacity-80 rounded-xl p-6 flex flex-col items-center w-full md:w-1/3 shadow-lg">
-                        <span className="text-4xl text-white mb-4">❝</span>
-                        <p className="text-white mb-6 text-base">
-                            “Colaborar con Medina en la app Titan Import Racing fue excepcional. Su experiencia en PHP y vinculación clave para armar una tienda en línea eficiente. Su compromiso y profesionalismo garantizan el éxito del proyecto.”
-                        </p>
-                        <div className="flex items-center gap-3 mt-auto">
-                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Javier P." className="w-12 h-12 rounded-full border-2 border-white" />
-                            <div className="text-left">
-                                <div className="font-semibold text-white">Javier P. <span className="ml-1">🇺🇸</span></div>
-                                <div className="text-xs text-white/80">Colaborador Import Racing App</div>
-                            </div>
-                        </div>
-                    </div>
-                    {/* Testimonio 2 */}
-                    <div className="bg-[#4841BB] bg-opacity-80 rounded-xl p-6 flex flex-col items-center w-full md:w-1/3 shadow-lg">
-                        <span className="text-4xl text-white mb-4">❝</span>
-                        <p className="text-white mb-6 text-base">
-                            “Su trabajo como diseñadora UX/UI, utilizando Figma y Tailwind CSS, impactó significativamente la experiencia del usuario. Sus soluciones centradas en el usuario fueron clave para la ejecución del proyecto.”
-                        </p>
-                        <div className="flex items-center gap-3 mt-auto">
-                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Misladnyh H." className="w-12 h-12 rounded-full border-2 border-white" />
-                            <div className="text-left">
-                                <div className="font-semibold text-white">Misladnyh H. <span className="ml-1">🇻🇪</span></div>
-                                <div className="text-xs text-white/80">Product Manager Emacsoft</div>
-                            </div>
-                        </div>
-                    </div>
-                    {/* Testimonio 3 */}
-                    <div className="bg-[#4841BB] bg-opacity-80 rounded-xl p-6 flex flex-col items-center w-full md:w-1/3 shadow-lg">
-                        <span className="text-4xl text-white mb-4">❝</span>
-                        <p className="text-white mb-6 text-base">
-                            “Trabajar con Adeleina Medina y su experiencia en PHP, JavaScript y CodeIgniter fue fundamental para mejorar las funcionalidades de nuestro sistema ERP. Contribuyó a la automatización de procesos. Altamente recomendada.”
-                        </p>
-                        <div className="flex items-center gap-3 mt-auto">
-                            <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Sebastian I." className="w-12 h-12 rounded-full border-2 border-white" />
-                            <div className="text-left">
-                                <div className="font-semibold text-white">Sebastian I. <span className="ml-1">🇻🇪</span></div>
-                                <div className="text-xs text-white/80">Ing. Informática Sistema ERP</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                {/* Flechas de navegación (simulación) */}
-                <div className="flex justify-center gap-4 mt-2 mb-2">
-                    <button className="w-10 h-10 rounded-full bg-white/20 text-white flex items-center justify-center text-2xl hover:bg-white/40 transition">&#8592;</button>
-                    <button className="w-10 h-10 rounded-full bg-white/20 text-white flex items-center justify-center text-2xl hover:bg-white/40 transition">&#8594;</button>
-                </div>
+  const handlePrev = () => {
+    if (animating) return;
+    setDirection("left");
+    setAnimating(true);
+    setTimeout(() => {
+      setStart((prev) => (prev - testimoniosPorPagina + total) % total);
+      setAnimating(false);
+    }, 350);
+  };
+
+  const handleNext = () => {
+    if (animating) return;
+    setDirection("right");
+    setAnimating(true);
+    setTimeout(() => {
+      setStart((prev) => (prev + testimoniosPorPagina) % total);
+      setAnimating(false);
+    }, 600);
+  };
+
+  const relatosAMostrar =
+    start + testimoniosPorPagina <= total
+      ? testimonios.slice(start, start + testimoniosPorPagina)
+      : [
+          ...testimonios.slice(start, total),
+          ...testimonios.slice(0, (start + testimoniosPorPagina) % total),
+        ];
+
+// Cambia el título si estamos mostrando los últimos 3 relatos
+  const isLastPage =
+    (start + testimoniosPorPagina) % total === 0 ||
+    start + testimoniosPorPagina >= total;
+
+  const titulo = isLastPage
+    ? "Experiencias de nuestros clientes"
+    : "Relatos de algunos Clientes";
+  // Animación de deslizamiento
+  const slideClass = animating
+    ? direction === "right"
+      ? "animate-slide-left"
+      : "animate-slide-right"
+    : "";
+  return (
+     <section className="bg-gradient-to-tr from-[#191970] to-[#1a1a2e] py-20 px-6 md:px-12 text-white">
+       <h2 className="text-center text-4xl md:text-5xl font-medium mb-16">
+        {titulo.split("\n").map((line, i) => (
+          <React.Fragment key={i}>
+            {line}
+            <br />
+          </React.Fragment>
+        ))}
+      </h2>
+
+      <div
+        className={`flex flex-col md:flex-row gap-10 justify-center items-stretch max-w-7xl mx-auto overflow-hidden ${slideClass}`}
+        style={{ minHeight: 420 }}
+      >
+        {relatosAMostrar.map((t, idx) => (
+          <div
+            key={idx}
+            className="group flex flex-col items-center text-center transition-transform duration-300 hover:scale-105"
+          >
+            {/* Burbuja de texto */}
+            <div className="relative bg-mi-gradiente rounded-2xl px-8 py-7 max-w-md w-full text-left shadow-lg mb-16 transition-all duration-300 group-hover:bg-white">
+              <span className="text-3xl text-white absolute top-6 left-6 transition-colors duration-300 group-hover:text-black">
+                ❝
+              </span>
+              <p className="text-base leading-relaxed font-normal text-white pl-8 pr-2 transition-colors duration-300 group-hover:text-black">
+                {t.texto}
+              </p>
+              {/* Punta de la burbuja */}
+              <div className="absolute left-1/2 -bottom-4 transform -translate-x-1/2 w-8 h-4 overflow-hidden flex justify-center items-end pointer-events-none">
+                <div
+                  className="w-8 h-8 bg-mi-gradiente punta-burbuja transition-colors duration-300 group-hover:bg-white"
+                  style={{
+                    clipPath: "polygon(50% 100%, 0 50%, 50% 0, 100% 50%)",
+                    transform: "rotate(0deg)",
+                  }}
+                ></div>
+              </div>
             </div>
-            {/* Contacto y formulario */}
-            <div className="w-full max-w-7xl mx-auto flex flex-col md:flex-row items-start justify-center gap-8 md:gap-16 px-4 md:px-0 mt-2">
-                {/* Columna de contacto */}
-                <div className="md:w-1/2 w-full flex flex-col justify-center md:items-start items-center text-left md:pl-8">
-                    <h3 className="text-white text-4xl md:text-5xl font-medium mb-8 leading-tight md:leading-tight text-left">
-                        Comunícate conmigo<br />
-                        para agendar una<br />
-                        Reunión.
-                    </h3>
-                    <div className="mb-6">
-                        <h4 className="font-semibold text-gray-300 mb-1">Llámame directamente</h4>
-                        <p className="text-white font-medium text-lg mb-6">+58 4247055630</p>
-                        <h4 className="font-semibold text-gray-300 mb-1">Correo electrónico de contacto</h4>
-                        <a
-                            href="mailto:Adelemdina@gmail.com"
-                            className="block w-fit bg-transparent border border-[#4361D7] text-[#4361D7] px-3 py-1 rounded-md font-medium transition-colors hover:bg-[#4361D7] hover:text-white focus:outline-none"
-                        >
-                            Adelemdina@gmail.com
-                        </a>
-                    </div>
-                </div>
-                {/* Columna del formulario */}
-                <div className="md:w-1/2 w-full flex items-center justify-center">
-                    <form className="w-full max-w-xl bg-transparent text-left">
-                        <div className="mb-4">
-                            <label className="block text-white mb-1" htmlFor="nombre">
-                                Nombre y apellidos
-                            </label>
-                            <input
-                                id="nombre"
-                                type="text"
-                                placeholder="Nombre y apellidos"
-                                className="w-full px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#4361D7] text-black"
-                            />
-                        </div>
-                        <div className="mb-4">
-                            <label className="block text-white mb-1" htmlFor="email">
-                                Tu correo electrónico
-                            </label>
-                            <input
-                                id="email"
-                                type="email"
-                                placeholder="Correo electrónico"
-                                className="w-full px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#4361D7] text-black"
-                            />
-                        </div>
-                        <div className="mb-4">
-                            <label className="block text-white mb-1" htmlFor="telefono">
-                                Tu teléfono móvil
-                            </label>
-                            <input
-                                id="telefono"
-                                type="tel"
-                                placeholder="Teléfono"
-                                className="w-full px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#4361D7] text-black"
-                            />
-                        </div>
-                        <div className="mb-4">
-                            <label className="block text-white mb-1" htmlFor="mensaje">
-                                Tu mensaje
-                            </label>
-                            <textarea
-                                id="mensaje"
-                                placeholder="Mensaje"
-                                rows={5}
-                                className="w-full px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#4361D7] text-black resize-none"
-                            />
-                        </div>
-                        <div className="flex items-center mb-4">
-                            <input
-                                id="privacidad"
-                                type="checkbox"
-                                className="mr-2"
-                            />
-                            <label htmlFor="privacidad" className="text-white text-sm">
-                                He leído y acepto la <a href="#" className="text-[#4361D7] underline">política de privacidad</a>.
-                            </label>
-                        </div>
-                        <div className="mb-4">
-                            {/* Simulación de reCAPTCHA */}
-                            <div className="bg-white rounded-md p-2 flex items-center gap-2 w-64">
-                                <input type="checkbox" className="w-5 h-5" />
-                                <span className="text-black text-sm">I'm not a robot</span>
-                                <div className="ml-auto">
-                                    <img src="https://www.gstatic.com/recaptcha/api2/logo_48.png" alt="reCAPTCHA" className="w-8 h-8 inline" />
-                                </div>
-                            </div>
-                        </div>
-                        <button
-                            type="submit"
-                            className="mt-4 flex items-center bg-white text-[#4361D7] hover:bg-[#4361D7] hover:text-white font-medium rounded-full px-8 py-2.5 shadow transition-colors text-xl mb-9"
-                        >
-                            Enviar Ahora
-                            <span className="ml-3 w-8 h-8 flex items-center justify-center rounded-full bg-[#4361D7] text-white text-xl">
-                                ↗
-                            </span>
-                        </button>
-                    </form>
-                </div>
+
+            {/* Imagen y datos */}
+            <div className="flex flex-col items-center gap-2 -mt-4 transition-transform duration-300 group-hover:scale-105">
+              <img
+                src={t.img}
+                alt={t.nombre}
+                className="w-16 h-16 rounded-full border-2 border-white shadow-md"
+              />
+              <div className="font-semibold text-lg flex items-center gap-2 text-white transition-colors duration-300 ">
+                {t.nombre} <span>{t.bandera}</span>
+              </div>
+              <div className="text-sm text-white/80 transition-colors duration-300 ">
+                {t.cargo}
+              </div>
             </div>
-        </section>
-    );
-}
+          </div>
+        ))}
+      </div>
+
+      {/* Flechas de navegación */}
+      <div className="flex justify-center items-center gap-10 mt-8">
+        <button
+          className="text-white text-4xl hover:text-[#4361D7] transition p-0 bg-transparent border-none outline-none"
+          onClick={handlePrev}
+        >
+          <span>&#60;</span>
+        </button>
+        <button
+          className="text-white text-4xl hover:text-[#4361D7] transition p-0 bg-transparent border-none outline-none"
+          onClick={handleNext}
+        >
+          <span>&#62;</span>
+        </button>
+      </div>
+
+      {/* Animaciones CSS */}
+   <style>
+  {`
+    .animate-slide-left {
+      animation: slideLeft 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .animate-slide-right {
+      animation: slideRight 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    @keyframes slideLeft {
+      0% { transform: translateX(100%);}
+      100% { transform: translateX(0);}
+    }
+    @keyframes slideRight {
+      0% { transform: translateX(-100%);}
+      100% { transform: translateX(0);}
+    }
+  `}
+</style>
+
+ {/* Sección de contacto */}
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-12 mt-11">
+        {/* Columna izquierda */}
+        <div className="w-full md:w-1/2 space-y-6">
+          <h3 className="text-4xl md:text-5xl font-medium leading-tight">
+            Comunícate conmigo <br /> para agendar una <br /> Reunión.
+          </h3>
+          <div>
+            <h4 className="text-gray-300 font-semibold">Llámame directamente</h4>
+            <p className="text-lg font-medium mb-4">+58 4247055630</p>
+            <h4 className="text-gray-300 font-semibold">Correo electrónico de contacto</h4>
+            <a
+              href="mailto:Adelemdina@gmail.com"
+              className="text-lg font-medium mb-4"
+            >
+              Adelemdina@gmail.com
+            </a>
+          </div>
+        </div>
+
+        {/* Formulario */}
+        <form className="w-full md:w-1/2 space-y-4">
+          <div>
+            <label className="block text-white mb-1" htmlFor="nombre">
+              Nombre y apellidos
+            </label>
+            <input
+              id="nombre"
+              type="text"
+              placeholder="Nombre y apellidos"
+              className="w-full px-4 py-2 bg-white text-black rounded-md focus:ring-2 focus:ring-[#4361D7] outline-none"
+            />
+          </div>
+          <div>
+            <label className="block text-white mb-1" htmlFor="email">
+              Tu correo electrónico
+            </label>
+            <input
+              id="email"
+              type="email"
+              placeholder="Correo electrónico"
+              className="w-full px-4 py-2 bg-white text-black rounded-md focus:ring-2 focus:ring-[#4361D7] outline-none"
+            />
+          </div>
+          <div>
+            <label className="block text-white mb-1" htmlFor="telefono">
+              Tu teléfono móvil
+            </label>
+            <input
+              id="telefono"
+              type="tel"
+              placeholder="Teléfono"
+              className="w-full px-4 py-2 bg-white text-black rounded-md focus:ring-2 focus:ring-[#4361D7] outline-none"
+            />
+          </div>
+          <div>
+            <label className="block text-white mb-1" htmlFor="mensaje">
+              Tu mensaje
+            </label>
+            <textarea
+              id="mensaje"
+              rows={5}
+              placeholder="Mensaje"
+              className="w-full px-4 py-2 bg-white text-black rounded-md focus:ring-2 focus:ring-[#4361D7] outline-none resize-none"
+            />
+          </div>
+          <div className="flex items-start gap-2">
+            <input id="privacidad" type="checkbox" className="mt-1" />
+            <label htmlFor="privacidad" className="text-white text-sm">
+              He leído y acepto la{' '}
+              <a href="#" className="text-[#0074F0] underline">
+                política de privacidad
+              </a>.
+            </label>
+          </div>
+          {/* CAPTCHA fake */}
+          <div className="bg-white rounded-md p-3 flex items-center gap-3 w-fit">
+            <input type="checkbox" className="w-5 h-5" />
+            <span className="text-black text-sm">I'm not a robot</span>
+            <img
+              src="https://www.gstatic.com/recaptcha/api2/logo_48.png"
+              alt="reCAPTCHA"
+              className="w-6 h-6 ml-auto"
+            />
+          </div>
+        
+          <button
+            type="submit"
+            className="inline-flex items-center bg-white rounded-full px-6 py-2.5 font-medium text-secondary hover:bg-[#3254d7] hover:text-white transition-colors shadow"
+          >
+            Enviar Ahora
+            <span className="ml-8 text-white bg-[#3254d7] rounded-full w-8 h-8 flex justify-center items-center text-2xl">
+              ↗
+            </span>
+          </button>
+        </form>
+      </div>
+    </section>
+  );
+};
