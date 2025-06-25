@@ -31,7 +31,9 @@ body{
     #4841BB_100%))
 
 }
-
+.hover\:bg-none:hover {
+  background-image: none !important;
+}
 .bg-mi-gradiente {
   background: var(--color-mi-gradiente);
 

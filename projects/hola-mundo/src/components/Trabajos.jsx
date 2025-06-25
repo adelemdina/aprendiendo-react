@@ -2,7 +2,7 @@ import { useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faWandMagicSparkles, faMobileScreenButton, faBasketShopping } from '@fortawesome/free-solid-svg-icons';
 import { faMicrosoft } from '@fortawesome/free-brands-svg-icons';
-import fondo from '../assets/images/Group.png';
+import { ParticlesComponent } from './ParticlesComponent';
 const filtros = [
   { label: "Web" },
   { label: "Sistema ERP" },
@@ -66,12 +66,10 @@ export  const Trabajos = () => {
     const contenidoActual = contenidos[activo];
   return (
   <section className="relative py-16 px-4 text-center h-[860px] overflow-hidden">
-  {/* Fondo semitransparente */}
-    <div
-    className="absolute inset-0 bg-center bg-cover bg-no-repeat"
-    style={{ backgroundImage: `url(${fondo})`, opacity: 0.4 }}
-  />
-   <div className="absolute inset-0 bg-gradient-to-tr from-[#191970] to-[#1a1a2e] opacity-90"></div>
+  <div className="absolute inset-0 z-0 pointer-events-none">
+    <ParticlesComponent />
+  </div>  
+ 
      <div className="relative z-10 text-white">
       <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
         Conoce los trabajos<br />

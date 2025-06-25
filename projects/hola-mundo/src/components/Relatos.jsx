@@ -1,4 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
+import emailjs from '@emailjs/browser';
+import Particles from "@tsparticles/react";
+
 
 const testimonios = [
   {
@@ -54,7 +57,30 @@ const testimonios = [
 
 
 export const Relatos = () => {
-    const [start, setStart] = useState(0);
+
+  const form = useRef();
+   const [isModalOpen, setIsModalOpen] = useState(false);
+
+ 
+
+   const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm('service_xpps1ni', 'template_mb1buaj', form.current, {
+        publicKey: 'gT9wdtf6cFzheeoJZ',
+      })
+      .then(
+        () => {
+          setIsModalOpen(true); // Mostrar modal de éxito
+          form.current.reset();  // Limpiar formulario
+        },
+        (error) => {
+          alert('Error al enviar el mensaje: ' + error.text);
+        },
+      );
+  };
+  const [start, setStart] = useState(0);
   const [direction, setDirection] = useState("right"); // "left" o "right"
   const [animating, setAnimating] = useState(false);
 
@@ -62,6 +88,8 @@ export const Relatos = () => {
   const total = testimonios.length;
 
   const handlePrev = () => {
+
+     
     if (animating) return;
     setDirection("left");
     setAnimating(true);
@@ -104,7 +132,8 @@ export const Relatos = () => {
       : "animate-slide-right"
     : "";
   return (
-     <section className="bg-gradient-to-tr from-[#191970] to-[#1a1a2e] py-20 px-6 md:px-12 text-white">
+   <section className=" relative bg-gradient-to-tr from-[#191970] to-[#1a1a2e] py-20 px-6 md:px-12 text-white">
+
        <h2 className="text-center text-4xl md:text-5xl font-medium mb-16">
         {titulo.split("\n").map((line, i) => (
           <React.Fragment key={i}>
@@ -124,7 +153,7 @@ export const Relatos = () => {
             className="group flex flex-col items-center text-center transition-transform duration-300 hover:scale-105"
           >
             {/* Burbuja de texto */}
-            <div className="relative bg-mi-gradiente rounded-2xl px-8 py-7 max-w-md w-full text-left shadow-lg mb-16 transition-all duration-300 group-hover:bg-white">
+            <div className="bg-[linear-gradient(90deg,#4841BB_0%,#4361D7_21%,#435FD5_85%,#4841BB_100%)] relative rounded-2xl px-8 py-7 max-w-md w-full text-left shadow-lg mb-16 transition-all duration-300 hover:bg-[linear-gradient(90deg,#fff,#fff)]">
               <span className="text-3xl text-white absolute top-6 left-6 transition-colors duration-300 group-hover:text-black">
                 ❝
               </span>
@@ -134,7 +163,7 @@ export const Relatos = () => {
               {/* Punta de la burbuja */}
               <div className="absolute left-1/2 -bottom-4 transform -translate-x-1/2 w-8 h-4 overflow-hidden flex justify-center items-end pointer-events-none">
                 <div
-                  className="w-8 h-8 bg-mi-gradiente punta-burbuja transition-colors duration-300 group-hover:bg-white"
+                  className="w-8 h-8 bg-[linear-gradient(90deg,#4841BB_0%,#4361D7_21%,#435FD5_85%,#4841BB_100%)] punta-burbuja transition-colors duration-300 group-hover:bg-[linear-gradient(90deg,#fff,#fff)]"
                   style={{
                     clipPath: "polygon(50% 100%, 0 50%, 50% 0, 100% 50%)",
                     transform: "rotate(0deg)",
@@ -218,82 +247,119 @@ export const Relatos = () => {
         </div>
 
         {/* Formulario */}
-        <form className="w-full md:w-1/2 space-y-4">
-          <div>
-            <label className="block text-white mb-1" htmlFor="nombre">
-              Nombre y apellidos
-            </label>
-            <input
-              id="nombre"
-              type="text"
-              placeholder="Nombre y apellidos"
-              className="w-full px-4 py-2 bg-white text-black rounded-md focus:ring-2 focus:ring-[#4361D7] outline-none"
-            />
-          </div>
-          <div>
-            <label className="block text-white mb-1" htmlFor="email">
-              Tu correo electrónico
-            </label>
-            <input
-              id="email"
-              type="email"
-              placeholder="Correo electrónico"
-              className="w-full px-4 py-2 bg-white text-black rounded-md focus:ring-2 focus:ring-[#4361D7] outline-none"
-            />
-          </div>
-          <div>
-            <label className="block text-white mb-1" htmlFor="telefono">
-              Tu teléfono móvil
-            </label>
-            <input
-              id="telefono"
-              type="tel"
-              placeholder="Teléfono"
-              className="w-full px-4 py-2 bg-white text-black rounded-md focus:ring-2 focus:ring-[#4361D7] outline-none"
-            />
-          </div>
-          <div>
-            <label className="block text-white mb-1" htmlFor="mensaje">
-              Tu mensaje
-            </label>
-            <textarea
-              id="mensaje"
-              rows={5}
-              placeholder="Mensaje"
-              className="w-full px-4 py-2 bg-white text-black rounded-md focus:ring-2 focus:ring-[#4361D7] outline-none resize-none"
-            />
-          </div>
-          <div className="flex items-start gap-2">
-            <input id="privacidad" type="checkbox" className="mt-1" />
-            <label htmlFor="privacidad" className="text-white text-sm">
-              He leído y acepto la{' '}
-              <a href="#" className="text-[#0074F0] underline">
-                política de privacidad
-              </a>.
-            </label>
-          </div>
-          {/* CAPTCHA fake */}
-          <div className="bg-white rounded-md p-3 flex items-center gap-3 w-fit">
-            <input type="checkbox" className="w-5 h-5" />
-            <span className="text-black text-sm">I'm not a robot</span>
-            <img
-              src="https://www.gstatic.com/recaptcha/api2/logo_48.png"
-              alt="reCAPTCHA"
-              className="w-6 h-6 ml-auto"
-            />
-          </div>
-        
-          <button
-            type="submit"
-            className="inline-flex items-center bg-white rounded-full px-6 py-2.5 font-medium text-secondary hover:bg-[#3254d7] hover:text-white transition-colors shadow"
-          >
-            Enviar Ahora
-            <span className="ml-8 text-white bg-[#3254d7] rounded-full w-8 h-8 flex justify-center items-center text-2xl">
-              ↗
-            </span>
-          </button>
-        </form>
+       <form
+      ref={form}
+      onSubmit={sendEmail}
+      className="w-full md:w-1/2 space-y-4"
+    >
+      <div>
+        <label className="block text-white mb-1" htmlFor="nombre">
+          Nombre y apellidos
+        </label>
+        <input
+          id="nombre"
+          name="user_name"  // Importante para EmailJS
+          type="text"
+          placeholder="Nombre y apellidos"
+          className="w-full px-4 py-2 bg-white text-black rounded-md focus:ring-2 focus:ring-[#4361D7] outline-none"
+          required
+        />
       </div>
+      <div>
+        <label className="block text-white mb-1" htmlFor="email">
+          Tu correo electrónico
+        </label>
+        <input
+          id="email"
+          name="user_email"  // Importante para EmailJS
+          type="email"
+          placeholder="Correo electrónico"
+          className="w-full px-4 py-2 bg-white text-black rounded-md focus:ring-2 focus:ring-[#4361D7] outline-none"
+          required
+        />
+      </div>
+      <div>
+        <label className="block text-white mb-1" htmlFor="telefono">
+          Tu teléfono móvil
+        </label>
+        <input
+          id="telefono"
+          name="user_phone"  // Importante para EmailJS (opcional, si lo quieres)
+          type="tel"
+          placeholder="Teléfono"
+          className="w-full px-4 py-2 bg-white text-black rounded-md focus:ring-2 focus:ring-[#4361D7] outline-none"
+        />
+      </div>
+      <div>
+        <label className="block text-white mb-1" htmlFor="mensaje">
+          Tu mensaje
+        </label>
+        <textarea
+          id="mensaje"
+          name="message"  // Importante para EmailJS
+          rows={5}
+          placeholder="Mensaje"
+          className="w-full px-4 py-2 bg-white text-black rounded-md focus:ring-2 focus:ring-[#4361D7] outline-none resize-none"
+          required
+        />
+      </div>
+      <div className="flex items-start gap-2">
+        <input id="privacidad" type="checkbox" className="mt-1" />
+        <label htmlFor="privacidad" className="text-white text-sm">
+          He leído y acepto la{" "}
+          <a href="#" className="text-[#0074F0] underline">
+            política de privacidad
+          </a>.
+        </label>
+      </div>
+      {/* CAPTCHA fake */}
+      <div className="bg-white rounded-md p-3 flex items-center gap-3 w-fit">
+        <input type="checkbox" className="w-5 h-5" />
+        <span className="text-black text-sm">I'm not a robot</span>
+        <img
+          src="https://www.gstatic.com/recaptcha/api2/logo_48.png"
+          alt="reCAPTCHA"
+          className="w-6 h-6 ml-auto"
+        />
+      </div>
+      <button
+        type="submit"
+        className="inline-flex items-center bg-white rounded-full px-6 py-2.5 font-medium text-secondary hover:bg-[#3254d7] hover:text-white transition-colors shadow"
+      >
+        Enviar Ahora
+        <span className="ml-8 text-white bg-[#3254d7] rounded-full w-8 h-8 flex justify-center items-center text-2xl">
+          ↗
+        </span>
+      </button>
+
+      <button
+  onClick={() => setIsModalOpen(true)}
+  className="mt-4 px-4 py-2 bg-yellow-500 text-white rounded-md hover:bg-yellow-600"
+>
+  Ver modal (prueba)
+</button>
+    </form>
+
+    
+
+      </div>
+      {/* Modal de éxito */}
+      {isModalOpen && (
+       <div className="fixed inset-0 bg-black/65 flex items-center justify-center z-50">
+          <div className="bg-white p-6 rounded-lg max-w-sm mx-auto text-center">
+            <h2 className="text-xl font-bold mb-4 text-[#3254d7]">¡Mensaje enviado!</h2>
+            <p className="mb-6 text-black">Tu mensaje ha sido enviado correctamente. Pronto me pondré en contacto contigo.</p>
+            <button
+              onClick={() => setIsModalOpen(false)}
+              className="w-full bg-[#3254d7] text-white py-2 rounded hover:bg-[#4361D7] transition"
+            >
+              Cerrar
+            </button>
+          </div>
+        </div>
+      )}
     </section>
+
+    
   );
 };
