@@ -1,9 +1,9 @@
 @import "tailwindcss";
 
 
-body{
+/* body{
  @apply bg-indigo-950;
-}
+} */
 
 @keyframes marquee {
   0% {

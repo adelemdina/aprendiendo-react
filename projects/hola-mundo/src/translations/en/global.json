@@ -1,3 +1,4 @@
+
 {
     "presentation": {
         "Iam": "Hello, I am",
@@ -16,5 +17,196 @@
         "phone": "Phone",
         "sendMessage": "Send Message",
         "chat": "Chat with me"
+    },
+  "about": {
+    "title1": "Transform",
+    "title2": "Your",
+    "title3": "Vision into",
+    "title4": "Reality",
+    "description": "I offer personalized solutions that capture the essence of each project. From attractive websites to functional applications, my goal is to transform your ideas into digital realities, always focusing on usability and aesthetics.",
+    "card1": {
+    "title": "Development and Programming",
+    "description": "I cover everything from creating dynamic websites to custom applications, using modern technologies and best practices to ensure scalable and maintainable projects.",
+    "button": "Learn more"
+  },
+  "card2": {
+    "title": "UI User Interface",
+    "description": "I design intuitive and attractive user interfaces. My approach focuses on creating functional and pleasant interfaces, ensuring that every interaction is smooth and satisfying.",
+    "button": "Learn more"
+  },
+  "card3": {
+    "title": "UX User Experience",
+    "description": "I focus on understanding user needs to design solutions that improve interaction and maximize satisfaction. I strive to make users feel comfortable and satisfied.",
+    "button": "Learn more"
+  }
+  },
+  "trabajos": {
+
+    "titulo1": "Discover the projects",
+     "titulo2": "recently completed",
+  "filtros": [
+    "Web",
+    "ERP System",
+    "Mobile App",
+    "Ecommerce"
+  ],
+  "Web": {
+    "icon": "faWandMagicSparkles",
+    "titulo": "Custom Websites",
+    "descripcion": "At Simpatía, we offer a thorough SEO audit to identify areas for improvement on your website...",
+    "items": [
+      "SEO Audit: Know the current state of your website.",
+      "SEO Consulting: Personalized strategies for your business.",
+      "Web positioning improvement: Increase your visibility on Google."
+    ],
+    "imagen": "./src/assets/images/web.png"
+  },
+  "ERP System": {
+    "icon": "faMicrosoft",
+    "titulo": "ERP Systems",
+    "descripcion": "Development and implementation of ERP systems adapted to various industries, improving efficiency and business process control.",
+    "items": [
+      "Automation of internal processes.",
+      "Clear and concise tracking reports.",
+      "Informed and strategic decision making."
+    ],
+    "imagen": "./src/assets/images/sistemas.png"
+  },
+  "Mobile App": {
+    "icon": "faMobileScreenButton",
+    "titulo": "Mobile App",
+    "descripcion": "We develop mobile apps for iOS and Android that offer great performance, usability, and attractive design.",
+    "items": [
+      "Native or hybrid experience.",
+      "Responsive design.",
+      "App Store optimization."
+    ],
+    "imagen": "./src/assets/images/app.jpg"
+  },
+  "Ecommerce": {
+    "icon": "faBasketShopping",
+    "titulo": "Ecommerce",
+    "descripcion": "We create effective and secure ecommerce sites, optimized for sales, with integrated payment gateways.",
+    "items": [
+      "Product and stock management.",
+      "Efficient shopping cart.",
+      "Integration with secure payment methods."
+    ],
+    "imagen": "./src/assets/images/ECommerce.jpg"
+  }
+},
+  "leading": {
+    "titulo": "We transform your ideas!"
+    },
+    "experiencia": {
+  "items": [
+    {
+      "titulo": "+5 Years",
+      "descripcion": "My experience as a developer and UX/UI designer"
+    },
+    {
+      "titulo": "+10 Happy Clients",
+      "descripcion": "Client satisfaction is my focal point of excellence"
+    },
+    {
+      "titulo": "+5 Technologies Used",
+      "descripcion": "PHP, JavaScript, MySQL, React, HTML, CSS, CodeIgniter..."
     }
+  ]
+},
+"relatosTituloUltima": "Our clients' experiences",
+"relatosTitulo": "Some clients' stories",
+"relatos": [
+  {
+    "texto": "Collaborating with Medina on the Italian Import Racing app was exceptional. Her expertise in PHP and MySQL was key to creating an efficient online store. Her commitment and professionalism ensured the project's success.",
+    "nombre": "Javier p.",
+    "cargo": "Import Racing App Collaborator",
+    "img": "https://randomuser.me/api/portraits/men/32.jpg",
+    "bandera": "🇺🇸"
+  },
+  {
+    "texto": "Her work as a UX/UI designer, using Figma and Tailwind CSS, significantly impacted the user experience. Her user-centered solutions were key to the project's execution.",
+    "nombre": "Edwin M.",
+    "cargo": "Product Manager Emacsoft",
+    "img": "https://randomuser.me/api/portraits/women/44.jpg",
+    "bandera": "🇻🇪"
+  },
+  {
+    "texto": "Working with Adeleina Medina and her expertise in PHP, JavaScript, and CodeIgniter was essential to improving our ERP system's functionalities. Highly recommended.",
+    "nombre": "Sebastian I.",
+    "cargo": "Computer Engineer ERP System",
+    "img": "https://randomuser.me/api/portraits/men/45.jpg",
+    "bandera": "🇻🇪"
+  },
+  {
+    "texto": "Adeleimar Medina optimized administrative processes in the company by implementing new modules in ProteoERP, improving inventory and billing management. Her experience in PHP and MySQL was key to the project's success.",
+    "nombre": "Edwin Moreno",
+    "cargo": "Proteo ERP Manager",
+    "img": "https://randomuser.me/api/portraits/men/45.jpg",
+    "bandera": "🇻🇪"
+  },
+  {
+    "texto": "Working with her was excellent. She developed the internal part of our mobile application, creating a fast and reliable system. Her commitment and professionalism were reflected in solutions tailored to our needs.",
+    "nombre": "Pedro D",
+    "cargo": "Import Racing App Engineer",
+    "img": "https://randomuser.me/api/portraits/men/45.jpg",
+    "bandera": "🇻🇪"
+  },
+  {
+    "texto": "In the development of the Orion AutoCaress website, I coordinated the project and assigned Adeleimar as the technical guide for the backend team. Her leadership and creation of key functions were fundamental to the project's success.",
+    "nombre": "Pedro D",
+    "cargo": "Eliezar Menéndez",
+    "img": "https://randomuser.me/api/portraits/men/45.jpg",
+    "bandera": "🇻🇪"
+  }
+],
+ 
+    "contactoForm": {
+  "titulo1": "Contact me",
+  "titulo2": "to schedule a",
+  "titulo3": "Meeting.",
+  "llamame": "Call me directly",
+  "telefono": "+58 4247055630",
+  "correo": "Contact email",
+  "email": "Adelemdina@gmail.com",
+  "nombreLabel": "Full name",
+  "nombrePlaceholder": "Full name",
+  "emailLabel": "Your email",
+  "emailPlaceholder": "Email",
+  "telefonoLabel": "Your mobile phone",
+  "telefonoPlaceholder": "Phone",
+  "mensajeLabel": "Your message",
+  "mensajePlaceholder": "Message",
+  "privacidad": "I have read and accept the",
+  "politica": "privacy policy",
+  "captcha": "I'm not a robot",
+  "enviar": "Send Now",
+  "modalTitulo": "Message sent!",
+  "modalMensaje": "Your message has been sent successfully. I will contact you soon.",
+  "modalCerrar": "Close"
+},
+"footer": {
+  "titulo1": "Inspire your community to",
+  "titulo2": "build your brand and create a",
+  "titulo3": "meaningful legacy.",
+  "conectar": "Connect",
+  "servicios": "Services",
+  "testimonios": "Testimonials",
+  "acerca": "About",
+  "trabajos": "Portfolio",
+  "contactenos": "Contact Us",
+  "telefono": "Tel +58 4247055630",
+  "correo": "Adelemdina@gmail.com",
+  "avisoLegal": "Legal Notice",
+  "privacidad": "Privacy Policy",
+ 
+        "text": "© 2025 Adeleimar Medina. All rights reserved.",
+        "privacyPolicy": "Privacy Policy",
+        "termsOfService": "Terms of Service",
+        "contact": "Contact"
+    
+}
+
+
+    
 }

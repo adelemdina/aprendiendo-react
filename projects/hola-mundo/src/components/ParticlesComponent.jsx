@@ -66,10 +66,10 @@ export const ParticlesComponent = (props) => {
       },
       particles: {
         color: {
-          value: "#FFFFFF",
+          value: "#ffffff",
         },
         links: {
-          color: "#FFFFFF",
+          color: "#ffffff",
           distance: 150,
           enable: true,
           opacity: 0.3,
@@ -106,6 +106,12 @@ export const ParticlesComponent = (props) => {
     [particleCount] 
   );
 
-  return <Particles id={props.id} init={particlesLoaded} options={options} />;
+return (
+  <Particles
+    id={props.id}
+    options={options}
+    loaded={particlesLoaded}
+  />
+);
 };
 

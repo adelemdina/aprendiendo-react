@@ -2,7 +2,7 @@
     "presentation" :{
         "Iam": "Hola!, Soy!",
          "work": "Desarrolladora y Diseñadora web"
-    }    ,
+    },
     "navbar": {
         "home": "Inicio",
         "about": "Acerca de",
@@ -16,5 +16,196 @@
     "phone": "Teléfono",
     "sendMessage": "Enviar mensaje",
     "chat": "Chatea conmigo"
+},
+"about": {
+    "title1": "Transforma",
+    "title2": "Tu",
+    "title3": "Visión en",
+    "title4": "Realidad",
+    "description": "Te ofrezco soluciones personalizadas que capturan la esencia de cada proyecto. Desde sitios web atractivos hasta aplicaciones funcionales, mi objetivo es transformar tus ideas en realidades digitales, siempre con un enfoque en la usabilidad y la estética.",
+
+    "card1": {
+    "title": "Desarrollo y programación",
+    "description": "Abarco desde la creación de sitios web dinámicos hasta aplicaciones personalizadas, utilizando tecnologías modernas y buenas prácticas para asegurar proyectos escalables y mantenibles.",
+    "button": "Conocer más"
+  },
+  "card2": {
+    "title": "UI Interface de usuario",
+    "description": "Diseño de interfaces de usuario intuitivas y atractivas. Mi enfoque se centra en crear interfaces funcionales y agradables, asegurando que cada interacción sea fluida y satisfactoria.",
+    "button": "Conocer más"
+  },
+   "card3": {
+    "title": "UX Experiencia de usuario",
+    "description": "Me centro en comprender las necesidades del usuario para diseñar soluciones que mejoren la interacción y maximicen su satisfacción. Me esfuerzo por que los usuarios se sientan cómodos y satisfechos.",
+    "button": "Conocer más"
+  }
+},
+  "trabajos": {
+     "titulo1": "Conoce los trabajos",
+     "titulo2": "realizados recientemente",
+  "filtros": [
+    "Web",
+    "Sistema ERP",
+    "App Móvil",
+    "Ecommerce"
+  ],
+  "Web": {
+    "icon": "faWandMagicSparkles",
+    "titulo": "Web Personalizadas",
+    "descripcion": "En Simpatía, te ofrecemos una auditoría SEO exhaustiva para identificar áreas de mejora en tu sitio web...",
+    "items": [
+      "Auditoría SEO: Conoce el estado actual de tu web.",
+      "Consultoría SEO: Estrategias personalizadas para tu negocio.",
+      "Mejora de posicionamiento web: Aumenta tu visibilidad en Google."
+    ],
+    "imagen": "./src/assets/images/web.png"
+  },
+  "Sistema ERP": {
+    "icon": "faMicrosoft",
+    "titulo": "Sistemas ERP",
+    "descripcion": "Desarrollado e implementacion sistemas ERP adaptados a diversas industrias, mejorando la eficiencia y el control de procesos empresariales.",
+    "items": [
+      "Automatización de procesos internos.",
+      "Informes de seguimiento claros y concisos",
+      "Toma de decisiones informadas y estratégicas"
+    ],
+    "imagen": "./src/assets/images/sistemas.png"
+  },
+  "App Móvil": {
+    "icon": "faMobileScreenButton",
+    "titulo": "App Móvil",
+    "descripcion": "Desarrollamos apps móviles para iOS y Android que ofrecen gran rendimiento, usabilidad y diseño atractivo.",
+    "items": [
+      "Experiencia nativa o híbrida.",
+      "Diseño responsive.",
+      "Optimización para App Stores."
+    ],
+    "imagen": "./src/assets/images/app.jpg"
+  },
+  "Ecommerce": {
+    "icon": "faBasketShopping",
+    "titulo": "Ecommerce",
+    "descripcion": "Creamos ecommerce efectivos y seguros, optimizados para ventas, con pasarelas de pago integradas.",
+    "items": [
+      "Gestión de productos y stock.",
+      "Carrito de compras eficiente.",
+      "Integración con métodos de pago seguros."
+    ],
+    "imagen": "./src/assets/images/ECommerce.jpg"
+  }
+},
+"leading": {
+    "titulo": "¡Transformamos tus ideas!"
+    },
+"experiencia": {
+  "items": [
+    {
+      "titulo": "+5 Años",
+      "descripcion": "Mi experiencia como desarrolladora y diseñadora Ux Ui"
+    },
+    {
+      "titulo": "+10 Clientes Felices",
+      "descripcion": "La satisfacción de los clientes es mi punto focal de la excelencia"
+    },
+    {
+      "titulo": "+5 Tecnologías de uso",
+      "descripcion": "PHP, JavaScript, MySQL, React, HTML, CSS, CodeIgniter..."
+    }
+  ]
+},
+"relatosTituloUltima": "Experiencias de nuestros clientes",
+"relatosTitulo": "Relatos de algunos Clientes",
+"relatos": 
+
+[
+
+  {
+    "texto": "Colaborar con Medina en la app Italian Import Racing fue excepcional. Su experiencia en PHP y MySQL fue clave para crear una tienda en línea eficiente. Su compromiso y profesionalismo garantizan el éxito del proyecto.",
+    "nombre": "Javier p.",
+    "cargo": "Colaborador Import Rancing App",
+    "img": "https://randomuser.me/api/portraits/men/32.jpg",
+    "bandera": "🇺🇸"
+  },
+  {
+    "texto": "Su trabajo como diseñadora UX/UI, utilizando Figma y Tailwind CSS, impactó significativamente la experiencia del usuario. Sus soluciones centradas en el usuario fueron clave para la ejecución del proyecto.",
+    "nombre": "Edwin M.",
+    "cargo": "Product Manager Emacsoft",
+    "img": "https://randomuser.me/api/portraits/women/44.jpg",
+    "bandera": "🇻🇪"
+  },
+  {
+    "texto": "Trabajar con Adeleina Medina y su experiencia en PHP, JavaScript y CodeIgniter fue fundamental para mejorar las funcionalidades de nuestro sistema ERP. Altamente recomendada.",
+    "nombre": "Sebastian I.",
+    "cargo": "Ing. Informática Sistema ERP",
+    "img": "https://randomuser.me/api/portraits/men/45.jpg",
+    "bandera": "🇻🇪"
+  },
+  {
+    "texto": "Adeleimar Medina optimizó procesos administrativos en la empresa al implementar nuevos módulos en ProteoERP, mejorando la gestión de inventario y facturación. Su experiencia en PHP y MySQL fue clave para el éxito del proyecto.",
+    "nombre": "Edwin Moreno",
+    "cargo": "Manager Proteo ERP",
+    "img": "https://randomuser.me/api/portraits/men/45.jpg",
+    "bandera": "🇻🇪"
+  },
+  {
+    "texto": "Trabajar con ella fue excelente. Desarrolló la parte interna de nuestra aplicación móvil, creando un sistema rápido y confiable. Su compromiso y profesionalismo se reflejaron en soluciones adaptadas a nuestras necesidades.",
+    "nombre": "Pedro D",
+    "cargo": "Ing.  Import Racing App",
+    "img": "https://randomuser.me/api/portraits/men/45.jpg",
+    "bandera": "🇻🇪"
+  },
+  {
+    "texto": "En el desarrollo del sitio web para Orion AutoCaress, coordiné el proyecto y asigné a Adeleimar como guía técnica del equipo backend. Su liderazgo y creación de funciones claves fueron fundamentales para el éxito del proyecto.",
+    "nombre": "Pedro D",
+    "cargo": "Eliezar Menéndez",
+    "img": "https://randomuser.me/api/portraits/men/45.jpg",
+    "bandera": "🇻🇪"
+  }
+  
+],
+"contactoForm": {
+  "titulo1": "Comunícate conmigo",
+  "titulo2": "para agendar una",
+  "titulo3": "Reunión.",
+  "llamame": "Llámame directamente",
+  "telefono": "+58 4247055630",
+  "correo": "Correo electrónico de contacto",
+  "email": "Adelemdina@gmail.com",
+  "nombreLabel": "Nombre y apellidos",
+  "nombrePlaceholder": "Nombre y apellidos",
+  "emailLabel": "Tu correo electrónico",
+  "emailPlaceholder": "Correo electrónico",
+  "telefonoLabel": "Tu teléfono móvil",
+  "telefonoPlaceholder": "Teléfono",
+  "mensajeLabel": "Tu mensaje",
+  "mensajePlaceholder": "Mensaje",
+  "privacidad": "He leído y acepto la",
+  "politica": "política de privacidad",
+  "captcha": "No soy un robot",
+  "enviar": "Enviar Ahora",
+  "modalTitulo": "¡Mensaje enviado!",
+  "modalMensaje": "Tu mensaje ha sido enviado correctamente. Pronto me pondré en contacto contigo.",
+  "modalCerrar": "Cerrar"
+},
+"footer": {
+  "titulo1": "Inspira a tu comunidad a",
+  "titulo2": "través de tu marca y crea un",
+  "titulo3": "legado significativo.",
+  "conectar": "Conectar",
+  "servicios": "Servicios",
+  "testimonios": "Testimonios",
+  "acerca": "Acerca De",
+  "trabajos": "Trabajos Realizados",
+  "contactenos": "Contáctenos",
+  "telefono": "Tel +58 4247055630",
+  "correo": "Adelemdina@gmail.com",
+  "avisoLegal": "Aviso legal",
+  "privacidad": "Política de privacidad",
+
+        "text": "© 2025 Adeleimar Medina. Derechos Reservados.",
+        "privacyPolicy": "Privacy Policy",
+        "termsOfService": "Terms of Service",
+        "contact": "Contact"
 }
+
 }

@@ -1,21 +1,29 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSquareGithub, faLinkedin, faWhatsapp, faSquareInstagram, faSquareBehance } from '@fortawesome/free-brands-svg-icons'
+
+
 import { useTranslation } from 'react-i18next'; 
-import { ParticlesComponent } from './ParticlesComponent';
+
+import { ParticlesBackground } from './ParticlesBackground';
 
 
 export const Content = () => {
+  const [t] = useTranslation("global");
 
-  const [t, i18n] = useTranslation("global");
+
+ 
+
+ 
+
   return (
-    
 
- <section className="text-white pt-32 pl-14 flex flex-col md:flex-row items-start gap-10 "
- >
-   <div className="absolute inset-0 z-0 pointer-events-none">
-    <ParticlesComponent />
-  </div>  
-  <div className="flex-1 pl-16 pt-16">
+
+    <section className="relative min-h-screen bg-indigo-950 text-white overflow-hidden pt-32 pl-14 flex flex-col md:flex-row items-start gap-10">
+      {/* Partículas */}
+      <div className="absolute inset-0 -z-0 w-full h-full">
+    <ParticlesBackground id="particles-content"/>
+      </div>
+<div className="flex-1 pl-16 pt-16">
     <div className="space-y-1.5 mb-8">
    
       <h1 className="text-7xl text-white pb-16">{t("presentation.Iam")}</h1>
@@ -82,8 +90,7 @@ export const Content = () => {
       </a>
     </div>
   </div>
-
-  <div className="flex-1 flex justify-end w-full md:w-auto pr-[56px] mt-10 md:mt-0">
+   <div className="flex-1 flex justify-end w-full md:w-auto pr-[56px] mt-10 md:mt-0 ">
     <img
       src="./src/assets/images/imagen.png"
       alt="Adelemedina"
@@ -94,17 +101,21 @@ export const Content = () => {
      
    <a
         href="https://wa.me/tu_numero"
-        className="fixed bottom-8 right-[122px] z-20 bg-green-500 text-white px-6 py-2.5 rounded-full shadow-lg flex items-center space-x-2 text-lg font-semibold hover:bg-green-600 transition"
+        className="fixed bottom-8 right-[122px] z-20 bg-green-500 text-white px-6 py-2.5 rounded-full shadow-lg flex items-center space-x-2 text-lg font-semibold hover:bg-green-600 transition "
         target="_blank"
         rel="noopener noreferrer"
       >
         <FontAwesomeIcon icon={faWhatsapp} className="text-2xl mr-2" />
-      <span>Chatea conmigo</span>
+      <span>{t("contact.chat")}</span>
       </a>
-     
-     
- 
-</section>
-
+    
+      {/* <div className="relative z-10 p-10">
+        <h1 className="text-5xl font-bold mb-4">{t("presentation.Iam")} Adele Medina</h1>
+        <p className="text-2xl">{t("presentation.work")}</p>
+        <p className="mt-6 text-lg">adelemedina@gmail.com</p>
+        <p className="text-lg">Mérida - Venezuela</p>
+       
+      </div> */}
+    </section>
   );
 };

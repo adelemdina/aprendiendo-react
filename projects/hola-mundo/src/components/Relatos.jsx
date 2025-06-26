@@ -1,63 +1,13 @@
 import React, { useState, useRef } from "react";
 import emailjs from '@emailjs/browser';
-import Particles from "@tsparticles/react";
+import { ParticlesBackground } from "./ParticlesBackground";
+import { useTranslation } from 'react-i18next'; 
 
 
-const testimonios = [
-  {
-    texto:
-      "Colaborar con Medina en la app Italian Import Racing fue excepcional. Su experiencia en PHP y MySQL fue clave para crear una tienda en línea eficiente. Su compromiso y profesionalismo garantizan el éxito del proyecto.",
-    nombre: "Javier p.",
-    cargo: "Colaborador Import Rancing App",
-    img: "https://randomuser.me/api/portraits/men/32.jpg",
-    bandera: "🇺🇸",
-  },
-  {
-    texto:
-      "Su trabajo como diseñadora UX/UI, utilizando Figma y Tailwind CSS, impactó significativamente la experiencia del usuario. Sus soluciones centradas en el usuario fueron clave para la ejecución del proyecto.",
-    nombre: "Edwin M.",
-    cargo: "Product Manager Emacsoft",
-    img: "https://randomuser.me/api/portraits/women/44.jpg",
-    bandera: "🇻🇪",
-  },
-  {
-    texto:
-      "Trabajar con Adeleina Medina y su experiencia en PHP, JavaScript y CodeIgniter fue fundamental para mejorar las funcionalidades de nuestro sistema ERP. Altamente recomendada.",
-    nombre: "Sebastian I.",
-    cargo: "Ing. Informática Sistema ERP",
-    img: "https://randomuser.me/api/portraits/men/45.jpg",
-    bandera: "🇻🇪",
-  },
-   {
-    texto:
-      "Adeleimar Medina optimizó procesos administrativos en la empresa al implementar nuevos módulos en ProteoERP, mejorando la gestión de inventario y facturación. Su experiencia en PHP y MySQL fue clave para el éxito del proyecto.",
-    nombre: "Edwin Moreno",
-    cargo: "Manager Proteo ERP",
-    img: "https://randomuser.me/api/portraits/men/45.jpg",
-    bandera: "🇻🇪",
-  },
-     {
-    texto:
-      "Trabajar con ella fue excelente. Desarrolló la parte interna de nuestra aplicación móvil, creando un sistema rápido y confiable. Su compromiso y profesionalismo se reflejaron en soluciones adaptadas a nuestras necesidades.",
-    nombre: "Pedro D",
-    cargo: "Ing.  Import Racing App",
-    img: "https://randomuser.me/api/portraits/men/45.jpg",
-    bandera: "🇻🇪",
-  },
-
-    {
-    texto:
-      "En el desarrollo del sitio web para Orion AutoCaress, coordiné el proyecto y asigné a Adeleimar como guía técnica del equipo backend. Su liderazgo y creación de funciones claves fueron fundamentales para el éxito del proyecto.",
-    nombre: "Pedro D",
-    cargo: "Eliezar Menéndez",
-    img: "https://randomuser.me/api/portraits/men/45.jpg",
-    bandera: "🇻🇪",
-  },
-];
 
 
 export const Relatos = () => {
-
+  const [t] = useTranslation("global");
   const form = useRef();
    const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -85,6 +35,7 @@ export const Relatos = () => {
   const [animating, setAnimating] = useState(false);
 
   const testimoniosPorPagina = 3;
+  const testimonios = t("relatos", { returnObjects: true });
   const total = testimonios.length;
 
   const handlePrev = () => {
@@ -122,9 +73,9 @@ export const Relatos = () => {
     (start + testimoniosPorPagina) % total === 0 ||
     start + testimoniosPorPagina >= total;
 
-  const titulo = isLastPage
-    ? "Experiencias de nuestros clientes"
-    : "Relatos de algunos Clientes";
+ const titulo = isLastPage
+  ? t("relatosTituloUltima")
+  : t("relatosTitulo");
   // Animación de deslizamiento
   const slideClass = animating
     ? direction === "right"
@@ -132,8 +83,14 @@ export const Relatos = () => {
       : "animate-slide-right"
     : "";
   return (
-   <section className=" relative bg-gradient-to-tr from-[#191970] to-[#1a1a2e] py-20 px-6 md:px-12 text-white">
+   <section className="relative min-h-screen py-20 px-6 md:px-12 w-full text-white bg-indigo-950 scroll-pb-16">
 
+  <div
+    className="absolute left-0 top-0 w-full h-full z-0 pointer-events-none"
+    style={{ minHeight: "100%", height: "100%", inset: 0 }}
+  >
+    <ParticlesBackground id="particles-relatos" />
+  </div>
        <h2 className="text-center text-4xl md:text-5xl font-medium mb-16">
         {titulo.split("\n").map((line, i) => (
           <React.Fragment key={i}>
@@ -228,77 +185,88 @@ export const Relatos = () => {
 
  {/* Sección de contacto */}
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-12 mt-11">
+     
         {/* Columna izquierda */}
         <div className="w-full md:w-1/2 space-y-6">
-          <h3 className="text-4xl md:text-5xl font-medium leading-tight">
-            Comunícate conmigo <br /> para agendar una <br /> Reunión.
-          </h3>
+         <h3 className="text-4xl md:text-5xl font-medium leading-tight">
+  {t("contactoForm.titulo1")} <br />
+  {t("contactoForm.titulo2")} <br />
+  {t("contactoForm.titulo3")}
+</h3>
           <div>
-            <h4 className="text-gray-300 font-semibold">Llámame directamente</h4>
+            <h4 className="text-gray-300 font-semibold">  {t("contactoForm.llamame")}</h4>
             <p className="text-lg font-medium mb-4">+58 4247055630</p>
-            <h4 className="text-gray-300 font-semibold">Correo electrónico de contacto</h4>
+            <h4 className="text-gray-300 font-semibold">  {t("contactoForm.correo")}</h4>
+            
             <a
               href="mailto:Adelemdina@gmail.com"
               className="text-lg font-medium mb-4"
             >
-              Adelemdina@gmail.com
+               {t("contactoForm.email")} <br />
+
             </a>
           </div>
         </div>
 
         {/* Formulario */}
        <form
+       
       ref={form}
       onSubmit={sendEmail}
       className="w-full md:w-1/2 space-y-4"
     >
+      
       <div>
         <label className="block text-white mb-1" htmlFor="nombre">
-          Nombre y apellidos
+            {t("contactoForm.nombreLabel")} <br />
+
         </label>
         <input
           id="nombre"
           name="user_name"  // Importante para EmailJS
           type="text"
-          placeholder="Nombre y apellidos"
+          placeholder=  {t("contactoForm.nombrePlaceholder")}
           className="w-full px-4 py-2 bg-white text-black rounded-md focus:ring-2 focus:ring-[#4361D7] outline-none"
           required
         />
       </div>
       <div>
         <label className="block text-white mb-1" htmlFor="email">
-          Tu correo electrónico
+           {t("contactoForm.correo")} <br />
+
         </label>
         <input
           id="email"
           name="user_email"  // Importante para EmailJS
           type="email"
-          placeholder="Correo electrónico"
+          placeholder={t("contactoForm.emailPlaceholder")}
           className="w-full px-4 py-2 bg-white text-black rounded-md focus:ring-2 focus:ring-[#4361D7] outline-none"
           required
         />
       </div>
       <div>
         <label className="block text-white mb-1" htmlFor="telefono">
-          Tu teléfono móvil
+          {t("contactoForm.telefonoLabel")} <br />
+
         </label>
         <input
           id="telefono"
           name="user_phone"  // Importante para EmailJS (opcional, si lo quieres)
           type="tel"
-          placeholder="Teléfono"
+          placeholder={t("contactoForm.telefonoPlaceholder")}
           className="w-full px-4 py-2 bg-white text-black rounded-md focus:ring-2 focus:ring-[#4361D7] outline-none"
         />
       </div>
       <div>
         <label className="block text-white mb-1" htmlFor="mensaje">
-          Tu mensaje
+            {t("contactoForm.mensajeLabel")} <br />
+
         </label>
         <textarea
           id="mensaje"
           name="message"  // Importante para EmailJS
           rows={5}
-          placeholder="Mensaje"
+          placeholder={t("contactoForm.mensajePlaceholder")}
           className="w-full px-4 py-2 bg-white text-black rounded-md focus:ring-2 focus:ring-[#4361D7] outline-none resize-none"
           required
         />
@@ -306,9 +274,9 @@ export const Relatos = () => {
       <div className="flex items-start gap-2">
         <input id="privacidad" type="checkbox" className="mt-1" />
         <label htmlFor="privacidad" className="text-white text-sm">
-          He leído y acepto la{" "}
+           {t("contactoForm.privacidad")} {""} {""}
           <a href="#" className="text-[#0074F0] underline">
-            política de privacidad
+            {t("contactoForm.politica")}
           </a>.
         </label>
       </div>
@@ -326,18 +294,18 @@ export const Relatos = () => {
         type="submit"
         className="inline-flex items-center bg-white rounded-full px-6 py-2.5 font-medium text-secondary hover:bg-[#3254d7] hover:text-white transition-colors shadow"
       >
-        Enviar Ahora
+       {t("contactoForm.enviar")}
         <span className="ml-8 text-white bg-[#3254d7] rounded-full w-8 h-8 flex justify-center items-center text-2xl">
           ↗
         </span>
       </button>
 
-      <button
+      {/* <button
   onClick={() => setIsModalOpen(true)}
   className="mt-4 px-4 py-2 bg-yellow-500 text-white rounded-md hover:bg-yellow-600"
 >
   Ver modal (prueba)
-</button>
+</button> */}
     </form>
 
     
@@ -347,13 +315,13 @@ export const Relatos = () => {
       {isModalOpen && (
        <div className="fixed inset-0 bg-black/65 flex items-center justify-center z-50">
           <div className="bg-white p-6 rounded-lg max-w-sm mx-auto text-center">
-            <h2 className="text-xl font-bold mb-4 text-[#3254d7]">¡Mensaje enviado!</h2>
-            <p className="mb-6 text-black">Tu mensaje ha sido enviado correctamente. Pronto me pondré en contacto contigo.</p>
+            <h2 className="text-xl font-bold mb-4 text-[#3254d7]">{t("contactoForm.modalTitulo")}</h2>
+            <p className="mb-6 text-black">{t("contactoForm.modalMensaje")}</p>
             <button
               onClick={() => setIsModalOpen(false)}
               className="w-full bg-[#3254d7] text-white py-2 rounded hover:bg-[#4361D7] transition"
             >
-              Cerrar
+              {t("contactoForm.modalCerrar")}
             </button>
           </div>
         </div>
