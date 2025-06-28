@@ -1,34 +1,63 @@
+import { useState } from 'react';
 import { Logo } from './Logo';
 import { LanguageSelector } from './LanguageSelector';  
 import { NavBar } from './NavBar';
 import { Contact } from "./Contact";
-
 import { ParticlesBackground } from './ParticlesBackground';
 
 export const Header = () => {
-   return (
-   <header className="pl-[58px] pr-[58px] bg-indigo-950">
-    
-     <div className="absolute inset-0 -z-0 w-full h-full">
-         <ParticlesBackground id="particles-header"/>
-           </div>
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const handleLinkClick = () => setIsMenuOpen(false); // Cierra menú al hacer clic
+
+  return (
+    <header className="pl-[58px] pr-[58px] bg-indigo-950 relative">
       
-      <div className="flex items-center w-full relative z-10">
-       
+      {/* Fondo de partículas */}
+      <div className="absolute inset-0 -z-0 w-full h-full">
+        <ParticlesBackground id="particles-header" />
+      </div>
+
+      {/* Contenido principal */}
+      <div className="flex items-center w-full relative z-10 py-6">
         <div className="flex items-center gap-12">
           <Logo />
           <LanguageSelector />
         </div>
-      
-        <div className="ml-[520px] flex items-center">
-        
-        </div>
 
-        <div className="ml-auto flex items-center gap-22 pr-[58px]">
-            <NavBar />
+        {/* NavBar visible solo en pantallas grandes */}
+        <div className="ml-auto hidden lg:flex items-center gap-28 pr-[58px]">
+          <NavBar />
           <Contact />
         </div>
+
+        {/* Botón hamburguesa solo en mobile */}
+        <div className="ml-auto lg:hidden z-20">
+          <button
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="text-white p-3 focus:outline-none"
+            aria-label="Abrir menú"
+          >
+            <svg
+              className="w-12 h-12"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
       </div>
+
+      {/* Menú desplegable solo en mobile */}
+      {isMenuOpen && (
+        <div className="lg:hidden absolute top-full left-0 w-full bg-indigo-950 z-50 shadow-md px-6 py-6 flex flex-col gap-8">
+          <NavBar isMobile onLinkClick={handleLinkClick} />
+          <Contact />
+        </div>
+      )}
     </header>
   );
-}
+};

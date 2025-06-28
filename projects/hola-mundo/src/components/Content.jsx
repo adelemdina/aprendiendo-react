@@ -18,12 +18,12 @@ export const Content = () => {
   return (
 
 
-    <section className="relative min-h-screen bg-indigo-950 text-white overflow-hidden pt-32 pl-14 flex flex-col md:flex-row items-start gap-10">
+<section className="relative min-h-screen bg-indigo-950 text-white overflow-hidden flex flex-col md:flex-row items-start gap-10 pt-20 pb-12 px-6 md:pt-32 md:pb-0 md:px-14">
       {/* Partículas */}
-      <div className="absolute inset-0 -z-0 w-full h-full">
-    <ParticlesBackground id="particles-content"/>
-      </div>
-<div className="flex-1 pl-16 pt-16">
+    <div className="absolute inset-0 z-0 w-full h-full pointer-events-none">
+  <ParticlesBackground id="particles-content"/>
+</div>
+<div className="flex-1 pt-4 px-2 md:pl-16 md:pt-16">
     <div className="space-y-1.5 mb-8">
    
       <h1 className="text-7xl text-white pb-16">{t("presentation.Iam")}</h1>
@@ -51,9 +51,9 @@ export const Content = () => {
         rel="noopener noreferrer"
         aria-label="GitHub"
         title="Ir a GitHub @adelemdina"
-        className="text-white hover:bg-primary transition-colors duration-300"
+        className="text-white hover:text-indigo-300  transition-colors duration-300"
       >
-        <FontAwesomeIcon icon={faSquareGithub} className="text-5xl" />
+        <FontAwesomeIcon icon={faSquareGithub} className="text-5xl " />
       </a>
 
       <a
@@ -62,7 +62,7 @@ export const Content = () => {
         rel="noopener noreferrer"
         aria-label="LinkedIn"
         title="Ir a LinkedIn @adelemdina"
-        className="text-white hover:bg-mi-gradiente transition-colors duration-300"
+        className="text-white hover:text-indigo-300 transition-colors duration-300"
       >
         <FontAwesomeIcon icon={faLinkedin} className="text-5xl" />
       </a>
@@ -90,14 +90,13 @@ export const Content = () => {
       </a>
     </div>
   </div>
-   <div className="flex-1 flex justify-end w-full md:w-auto pr-[56px] mt-10 md:mt-0 ">
-    <img
-      src="./src/assets/images/imagen.png"
-      alt="Adelemedina"
-      style={{ width: '720px', height: '720px' }}
-      className="object-contain rounded-lg shadow-lg"
-    />
-     </div>
+ <div className="flex-1 flex justify-center md:justify-end w-full md:w-auto mt-10 md:mt-0 px-4">
+  <img
+    src="./src/assets/images/imagen.png"
+    alt="Adelemedina"
+    className="object-contain rounded-lg shadow-lg w-[280px] h-[280px] sm:w-[400px] sm:h-[400px] md:w-[720px] md:h-[720px]"
+  />
+</div>
      
    <a
         href="https://wa.me/tu_numero"

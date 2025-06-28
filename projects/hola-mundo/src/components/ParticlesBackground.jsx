@@ -35,8 +35,14 @@ export const ParticlesBackground = ({ id, className }) => {
   }), []);
 
   return (
-    <div className={className}>
-      {init && <Particles id={id} options={options} />}
+       <div className={className} style={{ position: 'relative', width: '100%', height: '100%' }}>
+      {init && (
+        <Particles
+          id={id}
+          options={options}
+         style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
+        />
+      )}
     </div>
   );
 };

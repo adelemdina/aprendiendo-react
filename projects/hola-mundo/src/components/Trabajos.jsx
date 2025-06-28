@@ -21,13 +21,15 @@ export const Trabajos = () => {
 const [t] = useTranslation("global");
 const filtros = t("trabajos.filtros", { returnObjects: true });
 const contenidoActual = t(`trabajos.${activo}`, { returnObjects: true });
+
+ 
   return (
       
-    <section className="relative py-16 px-4 text-center h-[1020px] w-screen  overflow-hidden bg-indigo-950">
-      {/* ✅ Partículas: forzamos posición, tamaño y fondo */}
-      <div className="absolute top-0 left-0 w-full h-full z-0">
-      <ParticlesBackground id="particles-trabajos"/>
-      </div>
+<section className="relative py-16 px-4 text-center min-h-screen w-screen overflow-hidden bg-indigo-950">
+
+<div className="absolute top-0 left-0 w-full h-full z-0 hidden lg:block">
+  <ParticlesBackground id="particles-trabajos" />
+</div>
   <div className="relative z-10 text-white">
       <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
         {t("trabajos.titulo1")}<br />
@@ -50,7 +52,8 @@ const contenidoActual = t(`trabajos.${activo}`, { returnObjects: true });
       </div>
      
 
-    <div className="max-w-7xl mx-auto bg-white rounded-2xl p-8 md:p-12 flex flex-col md:flex-row items-center gap-8 shadow mt-8 min-h-[390px] h-[390px]">
+   <div className="max-w-7xl mx-auto bg-white rounded-2xl p-6 sm:p-8 md:p-12 flex flex-col md:flex-row items-center gap-8 shadow mt-8 min-h-[390px]">
+      {/* <div className="max-w-7xl mx-auto bg-white rounded-2xl p-6 sm:p-8 md:p-12 flex flex-col-reverse md:flex-row items-center gap-8 shadow mt-8 min-h-[390px]"></div> */}
   {/* Columna de texto */}
   <div className="flex-1 text-left">
     <div className="mb-4">
@@ -88,7 +91,8 @@ const contenidoActual = t(`trabajos.${activo}`, { returnObjects: true });
     <img
       src={contenidoActual.imagen}
       alt={contenidoActual.titulo}
-      className="rounded-xl w-full max-w-md object-cover"
+       className="rounded-xl w-full object-cover
+    max-w-[320px] sm:max-w-[320px] md:max-w-md lg:max-w-lg"
     />
   </div>
 </div>
@@ -106,14 +110,14 @@ const contenidoActual = t(`trabajos.${activo}`, { returnObjects: true });
 </a>
         
 </div>
-<div className="overflow-hidden w-screen h-[220px] mt-1">
+<div className="overflow-hidden w-screen h-[120px] sm:h-[160px] md:h-[220px] mt-[-12px] sm:mt-0">
   <div className="flex animate-marquee whitespace-nowrap">
-    <p className="text-white font-semibold text-[120px] leading-[220px] pr-[4rem]">
-      {t("leading.titulo")}
-    </p>
-    <p className="text-white font-semibold text-[120px] leading-[220px] pr-[4rem]">
-           {t("leading.titulo")}
-    </p>
+   <p className="text-white font-semibold text-[60px] sm:text-2xl md:text-[120px] leading-[110px] sm:leading-[160px] md:leading-[220px] pr-[2rem] sm:pr-[3rem] md:pr-[4rem]">
+  {t("leading.titulo")}
+</p>
+   <p className="text-white font-semibold text-5xl sm:text-2xl md:text-[120px] leading-[110px] sm:leading-[160px] md:leading-[220px] pr-[2rem] sm:pr-[3rem] md:pr-[4rem]">
+  {t("leading.titulo")}
+</p>
   </div>
 </div>
 </div>

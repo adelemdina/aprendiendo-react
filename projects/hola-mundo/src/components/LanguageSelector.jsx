@@ -41,7 +41,7 @@ export const LanguageSelector = () => {
         <button
           ref={esRef}
           onClick={() => i18n.changeLanguage("es")}
-          className={`relative z-10 rounded-full flex items-center gap-2 px-4 py-1 font-semibold focus:outline-none transition-colors duration-300 ${
+          className={`cursor-pointer  relative z-10 rounded-full flex items-center gap-2 px-4 py-1 font-semibold focus:outline-none transition-colors duration-300 ${
             currentLang === "es" ? "text-white" : "text-gray-700"
           }`}
         >
@@ -51,7 +51,7 @@ export const LanguageSelector = () => {
         <button
           ref={enRef}
           onClick={() => i18n.changeLanguage("en")}
-          className={`relative z-10 rounded-full flex items-center gap-2 px-4 py-1 font-semibold focus:outline-none transition-colors duration-300 ${
+          className={`cursor-pointer relative z-10 rounded-full flex items-center gap-2 px-4 py-1 font-semibold focus:outline-none transition-colors duration-300 ${
             currentLang === "en" ? "text-white" : "text-gray-700"
           }`}
         >

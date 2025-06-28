@@ -10,11 +10,13 @@ export const Acercade = () => {
 
   return (
       <section
-      className="bg-white bg-cover bg-center bg-no-repeat transition-all duration-500 pb-16 relative"
+      className="relative bg-white bg-cover bg-center bg-no-repeat transition-all duration-500 pb-16  pl-14"
+      // relative min-h-screen bg-indigo-950 text-white overflow-hidden pt-32 pl-14 flex flex-col md:flex-row items-start gap-10
       style={{ backgroundImage: `url(${shapes})` }}
     >
       
-      <div className="max-w-6xl  text-left pl-20 pt-16 ">
+      <div className="max-w-6xl  text-left flex-1 lg:pl-16 pt-16 sm:px-8 md:px-16 sm:pt-16 px-4">
+        {/* max-w-6xl text-left px-4 sm:px-8 md:px-16 lg:pl-20 pt-12 sm:pt-16 mx-auto */}
        <h2 className="text-6xl font-bold leading-tight">
         <span className="text-mi-gradiente">{t("about.title1")}</span>{' '}
         <span className="text-neutral-700">{t("about.title2")}</span> <br />
@@ -28,7 +30,8 @@ export const Acercade = () => {
      </div>
 
 
-<div className="flex justify-center gap-20 mt-12 max-w-[1440px] mx-auto">
+<div className="flex flex-col lg:flex-row justify-center items-center lg:items-stretch gap-8 lg:gap-20 mt-12 max-w-[1440px] mx-auto px-4 sm:px-6">
+  {/* div className="flex flex-col lg:flex-row justify-center items-center lg:items-stretch gap-8 lg:gap-20 mt-12 max-w-[1440px] mx-auto px-4 sm:px-6"> */}
   {/* Tarjeta 1 */}
   <div className="group w-[370px] h-[368px] bg-mi-gradiente text-white rounded-2xl shadow-lg p-6 flex flex-col justify-between transition-all duration-500 hover:h-[420px] hover:bg-mi-gradiente relative overflow-hidden"   >
       <div
