@@ -10,7 +10,8 @@ export const Acercade = () => {
 
   return (
       <section
-      className="relative bg-white bg-cover bg-center bg-no-repeat transition-all duration-500 pb-16  pl-14"
+      className="relative bg-white bg-cover bg-center bg-no-repeat transition-all duration-500 pb-16 gap-12  md:flex-row items-start overflow-hidden"
+      // "bg-indigo-950 text-white overflow-hidden pt-16 pb-12 px-4 sm:px-6 lg:px-14"
       // relative min-h-screen bg-indigo-950 text-white overflow-hidden pt-32 pl-14 flex flex-col md:flex-row items-start gap-10
       style={{ backgroundImage: `url(${shapes})` }}
     >

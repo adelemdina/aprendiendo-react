@@ -33,7 +33,8 @@ const [t] = useTranslation("global");
     //   </span>
     // </button>
      
-       <a href="" className="inline-flex items-center bg-white rounded-full px-6 py-2.5 font-medium text-secondary hover:bg-[#3254d7] hover:text-white transition-colors shadow">{t("contact.contact")}  <span className="ml-8 text-white bg-[#3254d7] rounded-full w-8 h-8 flex justify-center items-center text-2xl">↗</span></a>
+       <a href="" className="inline-flex items-center bg-white rounded-full px-6 py-2.5 font-medium text-secondary hover:bg-[#3254d7] hover:text-white transition-colors shadow group">{t("contact.contact")} 
+        <span className="ml-8 text-white bg-[#3254d7] rounded-full w-8 h-8 flex justify-center items-center text-2xl group-hover:bg-white group-hover:text-secondary">↗</span></a>
         
   
     

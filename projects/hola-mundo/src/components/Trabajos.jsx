@@ -26,7 +26,7 @@ const contenidoActual = t(`trabajos.${activo}`, { returnObjects: true });
   return (
       
 <section className="relative py-16 px-4 text-center min-h-screen w-screen overflow-hidden bg-indigo-950">
-
+ 
 <div className="absolute top-0 left-0 w-full h-full z-0 hidden lg:block">
   <ParticlesBackground id="particles-trabajos" />
 </div>
@@ -35,27 +35,28 @@ const contenidoActual = t(`trabajos.${activo}`, { returnObjects: true });
         {t("trabajos.titulo1")}<br />
          {t("trabajos.titulo2")}
       </h2>
-      <div className="flex justify-center gap-4 mt-12">
-        {filtros.map((filtro) => (
+     <div className="flex flex-wrap justify-center gap-4 mt-10 sm:mt-12 mb-6">
+  {filtros.map((filtro) => (
     <button
-            key={filtro}
-            onClick={() => setActivo(filtro)}
-            className={`px-5 py-2 rounded-full border border-[#5e5eaa] font-medium transition-colors duration-300
-                ${activo === filtro
-                ? "bg-mi-gradiente text-white shadow"
-                : "bg-transparent text-white hover:bg-red-100 hover:border-[#7d7dd1]"}
-            `}
-            >
-            {filtro}
-            </button>
-        ))}
-      </div>
+      key={filtro}
+      onClick={() => setActivo(filtro)}
+      className={`flex flex-col items-center justify-center px-4 py-3 rounded-full border border-[#5e5eaa] font-medium transition duration-300
+        ${activo === filtro
+          ? "bg-mi-gradiente text-white shadow"
+          : "bg-transparent text-white hover:bg-indigo-100 hover:text-indigo-800 hover:border-[#7d7dd1]"}
+        `}
+    >
      
+      <span className="text-sm sm:text-base">{filtro}</span>
+    </button>
+  ))}
+</div>
+
 
    <div className="max-w-7xl mx-auto bg-white rounded-2xl p-6 sm:p-8 md:p-12 flex flex-col md:flex-row items-center gap-8 shadow mt-8 min-h-[390px]">
-      {/* <div className="max-w-7xl mx-auto bg-white rounded-2xl p-6 sm:p-8 md:p-12 flex flex-col-reverse md:flex-row items-center gap-8 shadow mt-8 min-h-[390px]"></div> */}
+     
   {/* Columna de texto */}
-  <div className="flex-1 text-left">
+<div className="flex-1 text-left w-full">
     <div className="mb-4">
       <FontAwesomeIcon
       icon={iconMap[contenidoActual.icon]}
@@ -87,37 +88,35 @@ const contenidoActual = t(`trabajos.${activo}`, { returnObjects: true });
   </div>
 
   {/* Columna de imagen */}
-  <div className="flex-1 flex justify-center">
-    <img
-      src={contenidoActual.imagen}
-      alt={contenidoActual.titulo}
-       className="rounded-xl w-full object-cover
-    max-w-[320px] sm:max-w-[320px] md:max-w-md lg:max-w-lg"
-    />
-  </div>
+ <div className="flex-1 flex justify-center w-full">
+  <img
+    src={contenidoActual.imagen}
+    alt={contenidoActual.titulo}
+    className="rounded-xl w-full max-w-[280px] sm:max-w-[340px] md:max-w-[420px] lg:max-w-[480px] object-contain"
+  />
 </div>
-<div>
+</div>
+<div className="mt-8 sm:mt-10">
   <a
-  href=""
-  className="bg-secondary inline-flex items-center rounded-full px-6 py-2.5 font-medium text-write transition-colors shadow mt-9 hover:bg-white hover:text-secondary group"
->
-  <span className="transition-transform duration-300 group-hover:-translate-y-1">
-    {t("contact.contact")}
-  </span>
-  <span className="transition-transform duration-300 group-hover:-translate-y-1 group-hover:text-white group-hover:bg-secondary ml-8 text-secondary bg-white rounded-full w-8 h-8 flex justify-center items-center text-2xl">
-    ↗
-  </span>
-</a>
-        
+    href="#contact"
+    className="bg-secondary inline-flex items-center rounded-full px-6 py-2.5 font-medium text-white transition-colors shadow hover:bg-white hover:text-secondary group"
+  >
+    <span className="transition-transform duration-300 group-hover:-translate-y-1">
+      {t("contact.contact")}
+    </span>
+    <span className="transition-transform duration-300 group-hover:-translate-y-1 group-hover:text-white group-hover:bg-secondary ml-4 text-secondary bg-white rounded-full w-8 h-8 flex justify-center items-center text-2xl">
+      ↗
+    </span>
+  </a>
 </div>
-<div className="overflow-hidden w-screen h-[120px] sm:h-[160px] md:h-[220px] mt-[-12px] sm:mt-0">
+<div className="overflow-hidden w-full h-[80px] sm:h-[120px] md:h-[180px] mt-4 pt-10">
   <div className="flex animate-marquee whitespace-nowrap">
-   <p className="text-white font-semibold text-[60px] sm:text-2xl md:text-[120px] leading-[110px] sm:leading-[160px] md:leading-[220px] pr-[2rem] sm:pr-[3rem] md:pr-[4rem]">
-  {t("leading.titulo")}
-</p>
-   <p className="text-white font-semibold text-5xl sm:text-2xl md:text-[120px] leading-[110px] sm:leading-[160px] md:leading-[220px] pr-[2rem] sm:pr-[3rem] md:pr-[4rem]">
-  {t("leading.titulo")}
-</p>
+    <p className="text-white font-semibold text-3xl sm:text-5xl md:text-7xl pr-6 sm:pr-12">
+      {t("leading.titulo")}
+    </p>
+    <p className="text-white font-semibold text-3xl sm:text-5xl md:text-7xl pr-6 sm:pr-12">
+      {t("leading.titulo")}
+    </p>
   </div>
 </div>
 </div>

@@ -11,14 +11,20 @@ export const NavBar = ({ isMobile = false, onLinkClick }) => {
   ];
 
   return (
-    <nav className={isMobile ? "block lg:hidden" : "hidden lg:block"}>
-      <ul className={`flex ${isMobile ? "flex-col gap-4" : "space-x-10"} text-lg font-realtext font-regular`}>
+    <nav className={isMobile ? "block lg:hidden w-full" : "hidden md:block"}>
+      <ul
+        className={`${
+          isMobile
+            ? "flex flex-col items-center gap-4"
+            : "flex flex-wrap justify-center md:gap-6 lg:space-x-10"
+        } text-base sm:text-lg md:text-xl font-realtext font-regular`}
+      >
         {navItems.map((item, index) => (
           <li key={index}>
             <a
               href={item.href}
               onClick={onLinkClick}
-              className="text-white hover:text-blue-300 transition-colors cursor-pointer"
+              className="text-white hover:text-blue-300 transition-colors"
             >
               {item.name}
             </a>

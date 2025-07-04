@@ -91,7 +91,7 @@ export const Relatos = () => {
     <section className="relative min-h-screen py-20 px-6 md:px-12 w-full text-white bg-indigo-950 scroll-pb-16">
 
       <div
-        className="absolute left-0 top-0 w-full h-full z-0 pointer-events-none"
+        className="hidden lg:block lg:absolute lg:inset-0 lg:-z-0 lg:w-full lg:h-full"
         style={{ minHeight: "100%", height: "100%", inset: 0 }}
       >
         <ParticlesBackground id="particles-relatos" />
@@ -282,10 +282,10 @@ export const Relatos = () => {
 
           <button
             type="submit"
-            className="inline-flex items-center bg-white rounded-full px-6 py-2.5 font-medium text-secondary hover:bg-[#3254d7] hover:text-white transition-colors shadow"
+            className="inline-flex items-center bg-white rounded-full px-6 py-2.5 font-medium text-secondary hover:bg-[#3254d7] hover:text-white transition-colors shadow cursor-pointer"
           >
             {t("contactoForm.enviar")}
-            <span className="ml-8 text-white bg-[#3254d7] rounded-full w-8 h-8 flex justify-center items-center text-2xl">
+            <span className="transition-transform duration-300 group-hover:-translate-y-1 group-hover:text-white group-hover:bg-secondary ml-8 text-secondary bg-white rounded-full w-8 h-8 flex justify-center items-center text-2xl">
               ↗
             </span>
           </button>

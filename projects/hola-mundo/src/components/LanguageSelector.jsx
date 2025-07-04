@@ -32,6 +32,7 @@ export const LanguageSelector = () => {
   };
 
   return (
+    
     <div className="flex justify-end items-center min-h-[50px] px-2 bg-white rounded-full">
       <div className="relative flex rounded-full overflow-hidden">
         <div
@@ -41,12 +42,12 @@ export const LanguageSelector = () => {
         <button
           ref={esRef}
           onClick={() => i18n.changeLanguage("es")}
-          className={`cursor-pointer  relative z-10 rounded-full flex items-center gap-2 px-4 py-1 font-semibold focus:outline-none transition-colors duration-300 ${
+          className={`cursor-pointer relative z-10 rounded-full flex items-center gap-2 px-4 py-1 font-semibold focus:outline-none transition-colors duration-300 ${
             currentLang === "es" ? "text-white" : "text-gray-700"
           }`}
         >
-          <span className="text-xl">🇪🇸</span>
-          <span>Spanish</span>
+          <img src="/public/espana.png" alt="Español" className="w-5 h-5" />
+          <span className="hidden md:inline">Español</span>
         </button>
         <button
           ref={enRef}
@@ -55,8 +56,8 @@ export const LanguageSelector = () => {
             currentLang === "en" ? "text-white" : "text-gray-700"
           }`}
         >
-          <span className="text-xl">🇺🇸</span>
-          <span>English</span>
+          <img src="/public/usa.png" alt="English" className="w-5 h-5" />
+          <span className="hidden md:inline">English</span>
         </button>
       </div>
     </div>

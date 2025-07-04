@@ -11,10 +11,9 @@ export const Header = () => {
   const handleLinkClick = () => setIsMenuOpen(false); // Cierra menú al hacer clic
 
   return (
-    <header className="pl-[58px] pr-[58px] bg-indigo-950 relative">
-      
+   <header className="overflow-x-hidden px-4 sm:px-8 lg:px-[58px]  relative bg-amber-300">
       {/* Fondo de partículas */}
-      <div className="absolute inset-0 -z-0 w-full h-full">
+      <div className="hidden lg:block lg:absolute lg:inset-0 lg:-z-0 lg:w-full lg:h-ful">
         <ParticlesBackground id="particles-header" />
       </div>
 
@@ -52,12 +51,12 @@ export const Header = () => {
       </div>
 
       {/* Menú desplegable solo en mobile */}
-      {isMenuOpen && (
-        <div className="lg:hidden absolute top-full left-0 w-full bg-indigo-950 z-50 shadow-md px-6 py-6 flex flex-col gap-8">
-          <NavBar isMobile onLinkClick={handleLinkClick} />
-          <Contact />
-        </div>
-      )}
+     {isMenuOpen && (
+  <div className="lg:hidden fixed top-full left-0 w-full bg-indigo-950 z-50 shadow-md px-6 py-6 flex flex-col gap-8 overflow-x-hidden">
+    <NavBar isMobile onLinkClick={handleLinkClick} />
+    <Contact />
+  </div>
+)}
     </header>
   );
 };
