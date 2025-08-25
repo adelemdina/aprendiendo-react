@@ -7,7 +7,7 @@ const experiencia = t("experiencia.items", { returnObjects: true });
 return (
 
 
-<section
+<section id='experiencia'
     className="
     bg-white bg-cover bg-center bg-no-repeat flex justify-center items-center 
      sm:h-[280px] md:h-[321px] 

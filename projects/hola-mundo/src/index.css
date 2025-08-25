@@ -7,6 +7,47 @@
 body {
   overflow-x: hidden;
 }
+
+/* Mejoras responsive adicionales */
+@media (max-width: 640px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+/* Asegurar que las imágenes no se desborden */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Mejorar el scroll en mobile */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Ajustar el botón WhatsApp en pantallas muy pequeñas */
+@media (max-width: 375px) {
+  .flotar {
+    bottom: 1rem !important;
+    right: 1rem !important;
+  }
+}
+
+/* Animación para el gradiente del fondo mobile */
+@keyframes gradient-shift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.animate-gradient-shift {
+  background-size: 200% 200%;
+  animation: gradient-shift 8s ease infinite;
+}
 @keyframes marquee {
   0% {
     transform: translateX(0%);
@@ -14,6 +55,20 @@ body {
   100% {
     transform: translateX(-50%);
   }
+}
+
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+.flotar {
+  animation: float 3s ease-in-out infinite;
 }
 
 .animate-marquee {

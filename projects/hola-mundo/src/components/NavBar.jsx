@@ -5,9 +5,10 @@ export const NavBar = ({ isMobile = false, onLinkClick }) => {
 
   const navItems = [
     { name: t('navbar.home'), href: '#inicio' },
-    { name: t('navbar.about'), href: '#acerca' },
-    { name: t('navbar.services'), href: '#servicios' },
-    { name: t('navbar.portfolio'), href: '#trabajos' },
+
+    { name: t('navbar.services'), href: '#acerca' },
+    { name: t('navbar.portfolio'), href: '#servicios' },
+    { name: t('navbar.testimonios'), href: '#testimonios' },
   ];
 
   return (
@@ -24,9 +25,12 @@ export const NavBar = ({ isMobile = false, onLinkClick }) => {
             <a
               href={item.href}
               onClick={onLinkClick}
-              className="text-white hover:text-blue-300 transition-colors"
+              className={`relative group ${isMobile ? "text-secondary" : "text-white"} transition-colors hover:shadow-lg`}
             >
               {item.name}
+              <span
+                className="absolute left-0 -bottom-1 h-0.5 bg-current w-0 group-hover:w-full transition-all duration-300 rounded"
+              ></span>
             </a>
           </li>
         ))}

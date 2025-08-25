@@ -29,14 +29,14 @@ export const Footer = () => {
           </div>
         </div>
         {/* Enlaces */}
-        <div className="flex flex-col md:flex-row gap-12 flex-shrink-0">
+        <div className="flex flex-col md:flex-row gap-24 flex-shrink-0">
           <div>
             <h4 className="font-semibold text-[#181F39] mb-3">{t("footer.conectar")}</h4>
             <ul className="space-y-2">
               <li><a href="#servicios" className="text-[#181F39] underline underline-offset-2 hover:text-[#4841BB] text-2xl">{t("footer.servicios")}</a></li>
               <li><a href="#testimonios" className="text-[#181F39] underline underline-offset-2 hover:text-[#4841BB] text-2xl">{t("footer.testimonios")}</a></li>
               <li><a href="#acerca" className="text-[#181F39] underline underline-offset-2 hover:text-[#4841BB] text-2xl">{t("footer.acerca")}</a></li>
-              <li><a href="#trabajos" className="text-[#181F39] underline underline-offset-2 hover:text-[#4841BB] text-2xl">{t("footer.trabajos")}</a></li>
+          
             </ul>
           </div>
           <div>

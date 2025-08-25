@@ -7,7 +7,7 @@ import { Relatos } from "./components/Relatos";
 import { Footer } from "./components/Footer";
 export function App() {
   return (
-    <div className="bg-white text-black">
+    <div className=" bg-white text-black ">
         <Header />
 
       <Content />    

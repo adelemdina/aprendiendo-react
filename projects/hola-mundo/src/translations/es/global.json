@@ -1,13 +1,14 @@
 {
     "presentation" :{
-        "Iam": "Hola!, Soy!",
+        "Iam": "Hola!, Soy",
          "work": "Desarrolladora y Diseñadora web"
     },
     "navbar": {
         "home": "Inicio",
         "about": "Acerca de",
         "services": "Servicios",
-        "portfolio": "Trabajos Realizados"
+        "portfolio": "Trabajos Realizados",
+        "testimonios": "Testimonios"
     },
    "contact": {
     "contact": "Contáctame",
@@ -52,44 +53,44 @@
   "Web": {
     "icon": "faWandMagicSparkles",
     "titulo": "Web Personalizadas",
-    "descripcion": "En Simpatía, te ofrecemos una auditoría SEO exhaustiva para identificar áreas de mejora en tu sitio web...",
+    "descripcion": "Diseño y desarrollo sitios web a medida, pensados para destacar tu marca y cumplir objetivos concretos...",
     "items": [
-      "Auditoría SEO: Conoce el estado actual de tu web.",
-      "Consultoría SEO: Estrategias personalizadas para tu negocio.",
-      "Mejora de posicionamiento web: Aumenta tu visibilidad en Google."
+      "Diseño único: Páginas web adaptadas a tu estilo y necesidades.",
+      "Optimización SEO: Mejora tu visibilidad en buscadores desde el inicio.",
+      "Sitios escalables: Preparados para crecer junto a tu negocio."
     ],
-    "imagen": "./src/assets/images/web.png"
+    "imagen": "./src/assets/images/orion.png"
   },
   "Sistema ERP": {
     "icon": "faMicrosoft",
     "titulo": "Sistemas ERP",
-    "descripcion": "Desarrollado e implementacion sistemas ERP adaptados a diversas industrias, mejorando la eficiencia y el control de procesos empresariales.",
+    "descripcion": "Participé en el desarrollo de un sistema ERP, adaptándolo a los requerimientos específicos del cliente para optimizar sus procesos internos.",
     "items": [
-      "Automatización de procesos internos.",
-      "Informes de seguimiento claros y concisos",
-      "Toma de decisiones informadas y estratégicas"
+      "Desarrollo de módulos: Funcionalidades personalizadas según necesidades reales.",
+      "Integración eficiente: Conecta todas las áreas del sistema.",
+      "Colaboración ágil: Desarrollo en equipo con enfoque eficiente."
     ],
-    "imagen": "./src/assets/images/sistemas.png"
+    "imagen": "./src/assets/images/sistema-erp.jpeg"
   },
   "App Móvil": {
     "icon": "faMobileScreenButton",
     "titulo": "App Móvil",
-    "descripcion": "Desarrollamos apps móviles para iOS y Android que ofrecen gran rendimiento, usabilidad y diseño atractivo.",
+    "descripcion": "Participé en el desarrollo de una aplicación móvil para la empresa Ital Import, orientada a mejorar su gestión interna.",
     "items": [
-      "Experiencia nativa o híbrida.",
-      "Diseño responsive.",
-      "Optimización para App Stores."
+      "Diseño intuitivo: Interfaz clara y fácil de usar.",
+      "Funciones clave: Inventario, pedidos y más.",
+      "Trabajo en equipo: Desarrollo colaborativo y ágil."
     ],
-    "imagen": "./src/assets/images/sistemas.png"
+    "imagen": "./src/assets/images/app-movil.png"
   },
   "Ecommerce": {
     "icon": "faBasketShopping",
     "titulo": "Ecommerce",
-    "descripcion": "Creamos ecommerce efectivos y seguros, optimizados para ventas, con pasarelas de pago integradas.",
+    "descripcion": "Creamos tiendas en línea personalizadas que permiten vender productos de forma sencilla y segura.",
     "items": [
-      "Gestión de productos y stock.",
-      "Carrito de compras eficiente.",
-      "Integración con métodos de pago seguros."
+      "Diseño atractivo: Adaptado a la identidad visual del negocio.",
+      "Carrito de compras:  Experiencia de compra fluida.",
+      "Pasarelas de pago: Integración con métodos de pago confiables y seguros."
     ],
     "imagen": "./src/assets/images/ECommerce.jpg"
   }

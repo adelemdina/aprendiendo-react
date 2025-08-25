@@ -8,7 +8,8 @@
         "home": "Home",
         "about": "About",
         "services": "Services",
-        "portfolio": "Portfolio"
+        "portfolio": "Portfolio",
+         "testimonios": "Testimonials"
     },
     "contact": {
         "contact": "Contact Me",
@@ -50,50 +51,52 @@
     "Mobile App",
     "Ecommerce"
   ],
+  
   "Web": {
     "icon": "faWandMagicSparkles",
     "titulo": "Custom Websites",
-    "descripcion": "At Simpatía, we offer a thorough SEO audit to identify areas for improvement on your website...",
+    "descripcion": "Design and development of tailored websites to highlight your brand and achieve clear business goals.",
     "items": [
-      "SEO Audit: Know the current state of your website.",
-      "SEO Consulting: Personalized strategies for your business.",
-      "Web positioning improvement: Increase your visibility on Google."
+      "Unique design: Websites tailored to your style and needs.",
+      "SEO optimization: Improve visibility from day one.",
+      "Scalable sites: Built to grow with your business."
     ],
-    "imagen": "./src/assets/images/web.png"
+    "imagen": "./src/assets/images/orion.png"
   },
   "ERP System": {
     "icon": "faMicrosoft",
     "titulo": "ERP Systems",
-    "descripcion": "Development and implementation of ERP systems adapted to various industries, improving efficiency and business process control.",
+    "descripcion": "I contributed to the development of an ERP system, tailoring it to the client's specific requirements to streamline internal processes.",
     "items": [
-      "Automation of internal processes.",
-      "Clear and concise tracking reports.",
-      "Informed and strategic decision making."
+      "Module development: Features designed for real business needs.",
+      "Efficient integration: Connects all system areas.",
+      "Agile collaboration: Team-driven development with efficient focus."
     ],
-    "imagen": "./src/assets/images/sistemas.png"
+    "imagen": "./src/assets/images/sistema-erp.jpeg"
   },
   "Mobile App": {
     "icon": "faMobileScreenButton",
     "titulo": "Mobile App",
-    "descripcion": "We develop mobile apps for iOS and Android that offer great performance, usability, and attractive design.",
+    "descripcion": "I participated in building a mobile app for Ital Import, focused on improving their internal operations.",
     "items": [
-      "Native or hybrid experience.",
-      "Responsive design.",
-      "App Store optimization."
+      "Intuitive design: Clear and user-friendly interface.",
+      "Core features: Inventory, orders, and more.",
+      "Teamwork: Agile and collaborative development."
     ],
-    "imagen": "./src/assets/images/app.jpg"
+    "imagen": "./src/assets/images/app-movil.png"
   },
   "Ecommerce": {
     "icon": "faBasketShopping",
     "titulo": "Ecommerce",
-    "descripcion": "We create effective and secure ecommerce sites, optimized for sales, with integrated payment gateways.",
+    "descripcion": "We build custom online stores designed for easy and secure product sales.",
     "items": [
-      "Product and stock management.",
-      "Efficient shopping cart.",
-      "Integration with secure payment methods."
+      "Attractive design: Aligned with your brand identity.",
+      "Shopping cart: Smooth purchasing experience.",
+      "Payment gateways: Reliable and secure integrations."
     ],
     "imagen": "./src/assets/images/ECommerce.jpg"
   }
+
 },
   "leading": {
     "titulo": "We transform your ideas!"
