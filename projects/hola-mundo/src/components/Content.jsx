@@ -66,7 +66,7 @@ export const Content = () => {
                     <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
                     <p className="text-sm sm:text-base lg:text-lg text-gray-300">
                       Mérida - Venezuela
-                    </p>
+                    </p>hay
                   </div>
                 </div>
               </div>
