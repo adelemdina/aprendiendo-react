@@ -1,9 +1,9 @@
-import logo from '../assets/images/logo2.png';
+
 export const Logo = () => {
   return (
     <div className="flex items-center gap-2">
       <img
-        src={logo}
+        src="../assets/images/logo2.png"
         alt="Logo"
         className="object-contain rounded-lg 
           w-[100px] h-[77px]         /* tamaño móvil aumentado */
