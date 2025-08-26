@@ -146,7 +146,7 @@ export const Content = () => {
 
                 {/* Imagen principal */}
                 <img
-                  src="./src/assets/images/imagen.png"
+                  src={Cimagen}
                   alt="Adele Medina"
                   className="relative z-10 w-[280px] sm:w-[350px] md:w-[400px] lg:w-[500px] xl:w-[600px] h-auto object-contain rounded-2xl shadow-2xl"
                 />

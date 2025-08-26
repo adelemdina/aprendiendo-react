@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next'; 
 import { useRef, useEffect, useState } from 'react';
-
+import espanaImage from '/public/espana.png';
+import usImage from '/public/usa.png';
 export const LanguageSelector = () => {
   const { t, i18n } = useTranslation("global");
   const currentLang = i18n.language;
@@ -46,7 +47,9 @@ export const LanguageSelector = () => {
             currentLang === "es" ? "text-white" : "text-gray-700"
           }`}
         >
-          <img src="/public/espana.png" alt="Español" className="w-5 h-5" />
+        
+<img src={espanaImage} alt="Español" className="w-5 h-5" />
+
           <span className="hidden md:inline">Español</span>
         </button>
         <button
@@ -56,7 +59,7 @@ export const LanguageSelector = () => {
             currentLang === "en" ? "text-white" : "text-gray-700"
           }`}
         >
-          <img src="/public/usa.png" alt="English" className="w-5 h-5" />
+          <img src={usImage} alt="English" className="w-5 h-5" />
           <span className="hidden md:inline">English</span>
         </button>
       </div>
